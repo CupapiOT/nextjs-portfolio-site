@@ -17,7 +17,7 @@ export default function ProjectCard(props: ProjectCardProps) {
     <article
       id={props.id}
       className={
-        "max-w-95/100 rounded-xl grid grid-rows-[repeat(4,w-min)] gap-y-4 last:mb-16" +
+        "responsive-width rounded-xl grid grid-rows-[repeat(4,w-min)] gap-y-4 last:mb-16" +
         (props.className || "")
       }
     >
@@ -60,8 +60,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         </a>
       ) : (
         <p
-          className="p-2 rounded-xl bg-(--section-background) flex justify-center transition duration-300 hover:bg-(--section-background-lighter) flex gap-x-3 items-center text-neutral-400 italic"
-          target="_blank"
+          className="p-2 rounded-xl bg-(--section-background) flex justify-center transition duration-300 hover:bg-(--section-background-lighter) gap-x-3 items-center text-neutral-400 italic"
         >
           <Image
             className="w-min aspect-auto brightness-50"

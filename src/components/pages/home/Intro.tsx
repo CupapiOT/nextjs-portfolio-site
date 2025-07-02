@@ -4,11 +4,8 @@ import Section, {
 
 export default function Intro(props: SectionProps) {
   return (
-    <Section
-      id={props.id}
-      className={`bg-cyan-950 ${props.className || ""}`}
-    >
-      <h2 className="text-center font-extrabold text-2xl">
+    <Section id={props.id} className={`bg-cyan-950 ${props.className || ""}`}>
+      <h2 className="text-center font-extrabold text-2point5xl">
         Student & Developer
       </h2>
     </Section>

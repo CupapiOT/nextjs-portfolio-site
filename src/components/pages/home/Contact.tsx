@@ -13,15 +13,18 @@ interface ContactProps extends SectionProps {
 }
 
 export default function Contact(props: ContactProps) {
-  const classes =
-    "grid grid-cols-[2em_1fr] items-center p-2 px-5 gap-x-4 bg-(--section-background-lighter) rounded-xl cursor-pointer transform duration-300 hover:bg-(--section-background-lightest) hover:scale-[101%] shadow-none hover:shadow-lg";
+  const buttonClasses =
+    "w-full sm:max-w-4/5 lg:max-w-full lg:h-full grid grid-cols-[2em_1fr] items-center p-2 px-5 gap-x-4 bg-(--section-background-lighter) rounded-xl cursor-pointer transform duration-300 hover:bg-(--section-background-lightest) hover:scale-[101%] shadow-none hover:shadow-lg";
   const spanClasses =
-    "w-full text-left text-[min(clamp(calc(0.45em+2vw),calc(0.6em+1vw),1em), 1em)]";
+    "w-full text-left text-[min(clamp(calc(0.45em+2vw),calc(0.6em+1vw),1em),_1.25em)]";
   return (
-    <Section id={props.id} className={`gap-y-2 ${props.className || ""}`}>
+    <Section
+      id={props.id}
+      className={`items-center gap-y-2 ${props.className || ""}`}
+    >
       <button
         onClick={() => copyTextToClipboard(props.email)}
-        className={classes + (props.email !== undefined ? "" : " hidden")}
+        className={buttonClasses + (props.email !== undefined ? "" : " hidden")}
       >
         <Image
           className="aspect-square w-[2em]"
@@ -35,7 +38,9 @@ export default function Contact(props: ContactProps) {
       <a
         href={props.githubLink}
         target="_blank"
-        className={classes + (props.githubLink !== undefined ? "" : " hidden")}
+        className={
+          buttonClasses + (props.githubLink !== undefined ? "" : " hidden")
+        }
       >
         <Image
           className="aspect-square w-[2em]"
@@ -49,7 +54,9 @@ export default function Contact(props: ContactProps) {
       <a
         href={props.resumeSrc}
         target="_blank"
-        className={classes + (props.resumeSrc !== undefined ? "" : " hidden")}
+        className={
+          buttonClasses + (props.resumeSrc !== undefined ? "" : " hidden")
+        }
       >
         <Image
           className="aspect-square w-[2em]"

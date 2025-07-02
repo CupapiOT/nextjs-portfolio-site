@@ -13,7 +13,7 @@ interface SkillIconProps {
 function SkillsIcon(props: SkillIconProps) {
   return (
     <Image
-      className="aspect-square w-[3.5em] sm:w-[4em]"
+      className="aspect-square w-[3.5em] lg:w-[3em]"
       src={props.src}
       alt={props.alt}
       title={props.alt}
@@ -29,14 +29,18 @@ interface SkillsH3Props {
 
 function SkillsH3(props: SkillsH3Props) {
   return (
-    <h3 className="mb-4 text-center font-medium text-xl">{props.children}</h3>
+    <h3 className="mb-4 text-center font-medium text-xl lg:text-lg">{props.children}</h3>
   );
 }
 
 export default function Skills(props: SectionProps) {
+  const skillsIconContainerClasses =
+    "flex gap-3 flex-wrap justify-center self-center w-95/100 sm:max-w-2/3 sm:gap-5 lg:max-w-full";
   return (
     <Section id={props.id} className={props.className}>
-      <h2 className="section-header mb-6">Technologies I&apos;ve Worked With</h2>
+      <h2 className="section-header mb-6">
+        Technologies I&apos;ve Worked With
+      </h2>
       <SkillsH3>I&apos;m Best At</SkillsH3>
       <div className="flex justify-center">
         <SkillsIcon
@@ -46,7 +50,7 @@ export default function Skills(props: SectionProps) {
       </div>
       <HorizontalLine className="my-4" />
       <SkillsH3>I Also Enjoy</SkillsH3>
-      <div className="flex gap-3 flex-wrap justify-center self-center w-full sm:max-w-1/2 sm:gap-5">
+      <div className={skillsIconContainerClasses}>
         <SkillsIcon src="/src/skills/icon-c.svg" alt="C Programming Language" />
         <SkillsIcon src="/src/skills/icon-html5.svg" alt="HTML Language" />
         <SkillsIcon src="/src/skills/icon-css.svg" alt="CSS Language" />
@@ -59,17 +63,14 @@ export default function Skills(props: SectionProps) {
           alt="Python Programming Language"
         />
         <SkillsIcon src="/src/skills/icon-tailwindcss.svg" alt="Tailwind CSS" />
+        <SkillsIcon src="/src/skills/icon-nextjs.svg" alt="NextJS Framework" />
+        <SkillsIcon src="/src/skills/icon-react.svg" alt="React Framework" />
       </div>
       <HorizontalLine className="my-4" />
       <SkillsH3>Tools I Use</SkillsH3>
-      <div className="flex gap-3 flex-wrap justify-center self-center w-full sm:max-w-1/2 sm:gap-5">
+      <div className={skillsIconContainerClasses}>
         <SkillsIcon src="/src/skills/icon-git.svg" alt="Git CLI" />
-        <SkillsIcon
-          src="/src/general/icon-github.svg"
-          alt="GitHub Website"
-        />
-        <SkillsIcon src="/src/skills/icon-nextjs.svg" alt="NextJS Framework" />
-        <SkillsIcon src="/src/skills/icon-react.svg" alt="React Framework" />
+        <SkillsIcon src="/src/general/icon-github.svg" alt="GitHub Website" />
       </div>
     </Section>
   );

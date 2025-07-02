@@ -31,6 +31,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.responsive-width {
+  @apply max-w-95/100 sm:max-w-8/10 md:max-w-7/10 lg:max-w-full lg:w-full lg:h-full;
+}
+
 /*
  * Utility Classes 
  */
@@ -65,8 +69,18 @@ body {
 
 /* Section Header */
 
+.text-2point5xl { /* `2.5xl` is too finnicky to make work so `2point5` it is. */
+  font-size: 1.875em;
+}
+
 .section-header {
   @apply text-3xl font-bold mb-4 text-center lg:text-left;
+}
+@media (width >= 64rem) {
+  /* Apply `.text-2point5xl` */
+  .section-header {
+    font-size: 1.875em;
+  }
 }
 
 /* Custom Tailwind Utility Classes */
@@ -74,3 +88,4 @@ body {
 .backdrop-blur-xs {
   backdrop-filter: blur(var(--blur-xs));
 }
+

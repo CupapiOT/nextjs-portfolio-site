@@ -7,13 +7,13 @@ export default function Hero(props: SectionProps) {
   return (
     <Section
       id={props.id}
-      className={`py-3 grid grid-rows-[min-content_min-content_min-content] aspect-auto gap-y-2 lg:aspect-square ${props.className || ""}`}
+      className={`py-3 aspect-auto gap-y-2 ${props.className || ""}`}
     >
       <h1 className="text-4xl text-center font-bold text-cyan-600">
         Marvel Orleans
       </h1>
       <Image
-        className="h-min-content aspect-auto object-cover rounded-lg"
+        className="h-min-content object-cover rounded-lg xl:h-full"
         src="/res/Marvel-Orleans.jpeg"
         alt="A picture of Marvel Orleans"
         width={9999}

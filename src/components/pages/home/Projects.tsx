@@ -54,7 +54,7 @@ export default function Projects(props: ProjectsSectionProps) {
           link="./projects/#project-1"
           desc="A simple website to showcase my skills. Kickstarted my front-end journey."
           year={["2024", "2025"]}
-          techUsed={["HTMl", "CSS", "JS"]}
+          techUsed={["HTML", "CSS", "JS"]}
         />
         <HorizontalLine width="full" className="my-2" />
         <ProjectItem

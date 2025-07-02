@@ -20,7 +20,7 @@ export default function Home() {
           desc="Designed and actively maintaining a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and reinforcing core web development skills."
           link="https://cupapiot.github.io"
           year={["2024", "2025"]}
-          techUsed={["HTMl", "CSS", "JavaScript"]}
+          techUsed={["HTML", "CSS", "JavaScript"]}
         />
         <ProjectCard
           id="project-2"
