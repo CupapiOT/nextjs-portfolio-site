@@ -21,6 +21,7 @@ export default function Contact(props: ContactProps) {
     <Section
       id={props.id}
       className={`items-center gap-y-2 ${props.className || ""}`}
+      fadeInDirection={props.fadeInDirection}
     >
       <button
         onClick={() => copyTextToClipboard(props.email)}

@@ -20,20 +20,25 @@ export default function Home() {
       <main className="mt-[6.5em] mb-10 max-w-full w-full flex flex-col items-center gap-y-3 lg:text-sm lg:max-w-4/5 lg:grid lg:grid-cols-3 grid-rows-[h-min_h-min_h-min] lg:aspect-auto justify-items-center lg:mb-10 lg:gap-3 2xl:max-w-3/5">
         <Hero className="lg:row-start-2 lg:col-start-2" />
         <div className="flex flex-col relative w-full gap-y-3 items-center lg:row-start-2 lg:row-span-2 lg:h-full">
-          <Intro />
-          <Skills />
+          <Intro className="delay-[400ms]" fadeInDirection="RIGHT" />
+          <Skills className="delay-[300ms]" fadeInDirection="DOWN" />
         </div>
         <Projects
-          className="lg:row-start-1 lg:row-span-2 lg:col-start-3"
+          className="lg:row-start-1 lg:row-span-2 lg:col-start-3 lg:delay-100"
           pageLink="./projects/"
+          fadeInDirection="UP"
         />
-        <About className="lg:px-8 lg:row-start-1 lg:col-start-1 lg:col-span-2" />
+        <About
+          className="lg:px-8 lg:row-start-1 lg:col-start-1 lg:col-span-2"
+          fadeInDirection="RIGHT"
+        />
         <Contact
-          className="lg:row-start-3 lg:col-start-2 lg:col-span-2"
+          className="lg:row-start-3 lg:col-start-2 lg:col-span-2 lg:delay-200"
           email="hellomarvelorleans@gmail.com"
           githubLink="https://github.com/CupapiOT"
           githubName="Marvel Orleans"
           resumeSrc="/src/docs/Marvel_Orleans_CV.pdf"
+          fadeInDirection="LEFT"
         />
       </main>
       <Footer />

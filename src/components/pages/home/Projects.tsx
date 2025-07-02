@@ -49,6 +49,7 @@ export default function Projects(props: ProjectsSectionProps) {
     <Section
       id={props.id}
       className={`relative ${props.className || ""}`}
+      fadeInDirection={props.fadeInDirection}
     >
       <h2 className="section-header">Projects Overview</h2>
       <ul className="flex flex-col gap-y-2 mb-2">

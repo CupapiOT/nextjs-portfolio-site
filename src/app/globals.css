@@ -89,3 +89,10 @@ body {
   backdrop-filter: blur(var(--blur-xs));
 }
 
+.animate-presets {
+  @apply transition-all duration-500 opacity-0 ease-in-out motion-reduce:transition-none
+}
+
+.animate-slide-in-blur {
+  @apply opacity-100 translate-0 blur-none;
+}

@@ -7,7 +7,8 @@ export default function Hero(props: SectionProps) {
   return (
     <Section
       id={props.id}
-      className={`py-3 aspect-auto gap-y-2 ${props.className || ""}`}
+      className={`py-3 aspect-auto gap-y-2 !transition-none ${props.className || ""}`}
+      fadeInDirection={props.fadeInDirection}
     >
       <h1 className="text-4xl text-center font-bold text-cyan-600">
         Marvel Orleans
