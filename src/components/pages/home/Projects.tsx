@@ -46,7 +46,10 @@ interface ProjectsSectionProps extends SectionProps {
 
 export default function Projects(props: ProjectsSectionProps) {
   return (
-    <Section id={props.id} className={props.className}>
+    <Section
+      id={props.id}
+      className={`relative ${props.className || ""}`}
+    >
       <h2 className="section-header">Projects Overview</h2>
       <ul className="flex flex-col gap-y-2 mb-2">
         <ProjectItem
@@ -79,7 +82,12 @@ export default function Projects(props: ProjectsSectionProps) {
         )}
       </ul>
       {props.pageLink !== undefined ? (
-        <a href={props.pageLink}>See More ↗</a>
+        <a
+          className="absolute bottom-5 hover:underline hover:text-cyan-500 hover:text-[1rem] translate duration-300"
+          href={props.pageLink}
+        >
+          See More ↗
+        </a>
       ) : (
         ""
       )}

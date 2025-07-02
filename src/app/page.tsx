@@ -17,7 +17,7 @@ export default function Home() {
         ]}
         whichLink={0}
       />
-      <main className="mt-[7em] mb-10 max-w-full w-full flex flex-col items-center gap-y-3 lg:text-sm lg:max-w-4/5 lg:grid lg:grid-cols-3 grid-rows-[h-min_h-min_h-min] lg:aspect-auto justify-items-center lg:mb-10 lg:gap-3 2xl:max-w-3/5">
+      <main className="mt-[6.5em] mb-10 max-w-full w-full flex flex-col items-center gap-y-3 lg:text-sm lg:max-w-4/5 lg:grid lg:grid-cols-3 grid-rows-[h-min_h-min_h-min] lg:aspect-auto justify-items-center lg:mb-10 lg:gap-3 2xl:max-w-3/5">
         <Hero className="lg:row-start-2 lg:col-start-2" />
         <div className="flex flex-col relative w-full gap-y-3 items-center lg:row-start-2 lg:row-span-2 lg:h-full">
           <Intro />

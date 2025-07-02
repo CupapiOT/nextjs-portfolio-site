@@ -13,7 +13,7 @@ export default function Hero(props: SectionProps) {
         Marvel Orleans
       </h1>
       <Image
-        className="h-min-content object-cover rounded-lg xl:h-full"
+        className="h-min-content object-cover rounded-lg lg:h-full"
         src="/res/Marvel-Orleans.jpeg"
         alt="A picture of Marvel Orleans"
         width={9999}
