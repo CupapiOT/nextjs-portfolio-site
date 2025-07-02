@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en">
       <body
         className={`relative flex justify-center ${interSans.className} ${geistMono.variable} antialiased`}
       >
