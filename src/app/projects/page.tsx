@@ -14,7 +14,7 @@ export default function Home() {
       />
       <main className="text-lg mt-[6.5em] max-w-full w-full flex flex-col items-center gap-y-16">
         <ProjectCard
-          id="project-1"
+          id="simple-portfolio-site"
           title="Simple Portfolio Site"
           imgSrc="/src/projects/portfolio-site.webp"
           desc="Designed and actively maintaining a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and reinforcing core web development skills."
@@ -23,7 +23,7 @@ export default function Home() {
           techUsed={["HTML", "CSS", "JavaScript"]}
         />
         <ProjectCard
-          id="project-2"
+          id="matrix-visualizer"
           title="Matrix Visualizer Web-app"
           imgSrc="/src/projects/animated-matrices.webp"
           desc="A self-initiated project to help visualize linear algebra transformations, built to deepen my understanding of matrix math. Open source on GitHub."
@@ -32,7 +32,7 @@ export default function Home() {
           techUsed={["Python", "Python Dash", "Python Plotly"]}
         />
         <ProjectCard
-          id="project-3"
+          id="image-references"
           title="Image References Desktop App"
           imgSrc="/src/projects/image-references.webp"
           desc="Handled all aspects solo in building a reference-sketching tool for a professional artist (my brother). Evolved through regular feedback, for practicality and ease of use."

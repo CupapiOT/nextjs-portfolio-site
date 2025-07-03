@@ -21,7 +21,7 @@ function ProjectItem(props: ProjectItemProps) {
       <div className="flex">
         <h3 className="text-lg mr-1 text-cyan-500">
           {props.link !== undefined ? (
-            <a href={props.link} target="_blank" className="hover:underline">
+            <a href={props.link} className="hover:underline">
               {props.title}🔗
             </a>
           ) : (
@@ -60,7 +60,7 @@ export default function Projects(props: ProjectsSectionProps) {
       <ul className="flex flex-col gap-y-2 mb-2">
         <ProjectItem
           title="Portfolio Website"
-          link="./projects/#project-1"
+          link="./projects"
           desc="A simple website to showcase my skills. Kickstarted my front-end journey."
           year={["2024", "2025"]}
           techUsed={["HTML", "CSS", "JS"]}
@@ -68,7 +68,7 @@ export default function Projects(props: ProjectsSectionProps) {
         <HorizontalLine width="full" className="my-2" />
         <ProjectItem
           title="2D Matrix Visualizer"
-          link="./projects/#project-2"
+          link="./projects#matrix-visualizer"
           desc="A tool to help students learn matrices in linear algebra visually and interactively."
           year={["2024", "PRESENT"]}
           techUsed={["Python", "Python Dash", "Python Plotly"]}
@@ -76,7 +76,7 @@ export default function Projects(props: ProjectsSectionProps) {
         <HorizontalLine width="full" className="my-2" />
         <ProjectItem
           title="Image References App"
-          link="./projects/#project-3"
+          link="./projects#image-references"
           desc="A reference-sketching tool used daily by a professional artist."
           techUsed={["Python", "CustomTkinter"]}
           year={["2023", "2024"]}
