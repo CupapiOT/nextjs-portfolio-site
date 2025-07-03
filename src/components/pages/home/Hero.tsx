@@ -14,9 +14,9 @@ export default function Hero(props: SectionProps) {
         Marvel Orleans
       </h1>
       <Image
-        className="h-min-content object-cover rounded-lg lg:h-full"
-        src="/res/Marvel-Orleans.jpeg"
-        alt="A picture of Marvel Orleans"
+        className="h-min aspect-video object-cover rounded-lg lg:h-full"
+        src="/src/profile-photo.webp"
+        alt="A picture of me."
         width={9999}
         height={9999}
       />

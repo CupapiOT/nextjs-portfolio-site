@@ -16,7 +16,7 @@ export default function Home() {
         <ProjectCard
           id="project-1"
           title="Simple Portfolio Site"
-          imgSrc="/src/projects/portfolio-site.png"
+          imgSrc="/src/projects/portfolio-site.webp"
           desc="Designed and actively maintaining a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and reinforcing core web development skills."
           link="https://cupapiot.github.io"
           year={["2024", "2025"]}
@@ -25,7 +25,7 @@ export default function Home() {
         <ProjectCard
           id="project-2"
           title="Matrix Visualizer Web-app"
-          imgSrc="/src/projects/animated-matrices.png"
+          imgSrc="/src/projects/animated-matrices.webp"
           desc="A self-initiated project to help visualize linear algebra transformations, built to deepen my understanding of matrix math. Open source on GitHub."
           link="https://github.com/CupapiOT/animated-matrices"
           year={["2024", "PRESENT"]}
@@ -34,7 +34,7 @@ export default function Home() {
         <ProjectCard
           id="project-3"
           title="Image References Desktop App"
-          imgSrc="/src/projects/image-references.png"
+          imgSrc="/src/projects/image-references.webp"
           desc="Handled all aspects solo in building a reference-sketching tool for a professional artist (my brother). Evolved through regular feedback, for practicality and ease of use."
           link="https://github.com/CupapiOT/croquis-image-references"
           year={["2023", "2024"]}
