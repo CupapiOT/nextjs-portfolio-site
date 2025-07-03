@@ -25,14 +25,19 @@
   }
 }
 
+/* Responsiveness for Ultra-Wide (4K) screens.
+ * I'm simply scaling up the page.
+ */
+@media (width >= 2080px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.responsive-width {
-  @apply max-w-95/100 sm:max-w-8/10 md:max-w-7/10 lg:max-w-full lg:w-full lg:h-full;
 }
 
 /*
@@ -69,7 +74,8 @@ body {
 
 /* Section Header */
 
-.text-2point5xl { /* `2.5xl` is too finnicky to make work so `2point5` it is. */
+/* `2.5xl` is too finnicky to make work so `2point5` it is. */
+.text-2point5xl {
   font-size: 1.875em;
 }
 
@@ -85,14 +91,19 @@ body {
 
 /* Custom Tailwind Utility Classes */
 
+.responsive-width {
+  @apply max-w-95/100 sm:max-w-8/10 md:max-w-7/10 lg:max-w-full lg:w-full lg:h-full;
+}
+
 .backdrop-blur-xs {
   backdrop-filter: blur(var(--blur-xs));
 }
 
 .animate-presets {
-  @apply transition-all duration-500 opacity-0 ease-in-out motion-reduce:transition-none
+  @apply transition-all duration-500 opacity-0 ease-in-out motion-reduce:transition-none;
 }
 
 .animate-slide-in-blur {
   @apply opacity-100 translate-0 blur-none;
 }
+

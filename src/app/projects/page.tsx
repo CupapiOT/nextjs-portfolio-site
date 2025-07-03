@@ -12,7 +12,7 @@ export default function Home() {
         ]}
         whichLink={1}
       />
-      <main className="text-lg mt-[6.5em] max-w-full w-full flex flex-col items-center gap-y-16">
+      <main className="text-lg pt-[6.5em] min-2xl:max-[130rem]:pt-[22rem] max-w-full w-full flex flex-col items-center gap-y-16">
         <ProjectCard
           id="simple-portfolio-site"
           title="Simple Portfolio Site"

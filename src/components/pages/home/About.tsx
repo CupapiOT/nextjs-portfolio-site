@@ -10,11 +10,12 @@ export default function About(props: SectionProps) {
       fadeInDirection={props.fadeInDirection}
     >
       <h2 className="section-header mb-4">Who Am I?</h2>
-      <p className="text-gray-400 text-justify !text-base">
+      <p className="w-full self-center sm:max-w-9/10 lg:max-w-full text-gray-400 text-justify text-base min-sm:max-lg:text-lg">
         Hey, Marvel Orleans here. 👋 I&apos;m a highshooler in Indonesia with a
-        passion in front-end development. I&apos;ve been teaching myself to code
-        for a little over two years now. So, if you&apos;ve got a project
-        you&apos;d like to work on, feel free to contact me.
+        passion in programming. I&apos;ve been teaching myself to code for a
+        over two years now, and I&apos;ve built some side projects to show for it.
+        So, if you&apos;ve got a project you&apos;d like to work on, feel free
+        to contact me.
       </p>
     </Section>
   );

@@ -23,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className="scroll-smooth 2xl:h-full" lang="en">
       <body
-        className={`relative flex justify-center ${interSans.className} ${geistMono.variable} antialiased`}
+        className={`relative flex justify-center ${interSans.className} ${geistMono.variable} antialiased 2xl:h-full 2xl:items-center`}
       >
         {children}
       </body>

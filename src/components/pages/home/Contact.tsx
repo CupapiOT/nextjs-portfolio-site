@@ -6,7 +6,7 @@ import Image from "next/image";
 import copyTextToClipboard from "@/util/copyTextToClipboard";
 
 /**
- * We use an interface here so it's easily customizable in the homepage 
+ * We use an interface here so it's easily customizable in the homepage
  * later on.
  */
 interface ContactProps extends SectionProps {
@@ -20,7 +20,9 @@ export default function Contact(props: ContactProps) {
   const buttonClasses =
     "w-full sm:max-w-4/5 lg:max-w-full lg:h-full grid grid-cols-[2em_1fr] items-center p-2 px-5 gap-x-4 bg-(--section-background-lighter) rounded-xl cursor-pointer transform duration-300 hover:bg-(--section-background-lightest) hover:scale-[101%] shadow-none hover:shadow-lg";
   const spanClasses =
-    "w-full text-left text-[min(clamp(calc(0.45em+2vw),calc(0.6em+1vw),1em),_1.25em)]";
+    "w-full text-left text-[min(clamp(calc(0.45em+2vw),calc(0.6em+1vw),1em),_1.25em)] " +
+    "max-[24rem]:text-sm max-[22rem]:text-[0.75em]";
+  const imgClasses = "aspect-square w-8 max-[24rem]:w-6";
   return (
     <Section
       id={props.id}
@@ -32,7 +34,7 @@ export default function Contact(props: ContactProps) {
         className={buttonClasses + (props.email !== undefined ? "" : " hidden")}
       >
         <Image
-          className="aspect-square w-[2em]"
+          className={imgClasses}
           src="/src/general/icon-email.svg"
           alt="Email Icon"
           width={9999}
@@ -48,7 +50,7 @@ export default function Contact(props: ContactProps) {
         }
       >
         <Image
-          className="aspect-square w-[2em]"
+          className={imgClasses}
           src="/src/general/icon-github.svg"
           alt="Github Icon"
           width={9999}
@@ -64,7 +66,7 @@ export default function Contact(props: ContactProps) {
         }
       >
         <Image
-          className="aspect-square w-[2em]"
+          className={imgClasses}
           src="/src/general/icon-docs.svg"
           alt="Document Icon"
           width={9999}

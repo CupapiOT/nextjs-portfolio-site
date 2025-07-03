@@ -18,7 +18,7 @@ interface ProjectItemProps {
 function ProjectItem(props: ProjectItemProps) {
   return (
     <li>
-      <div className="flex">
+      <div className="flex lg:flex-col 2xl:flex-row">
         <h3 className="text-lg mr-1 text-cyan-500">
           {props.link !== undefined ? (
             <a href={props.link} className="hover:underline">
@@ -29,7 +29,7 @@ function ProjectItem(props: ProjectItemProps) {
           )}
         </h3>
         {props.year !== undefined ? (
-          <span className="translate-y-1.5 text-sm text-gray-500">
+          <span className="translate-y-1.5 text-sm text-gray-500 lg:translate-0 2xl:translate-y-1.5">
             ({props.year[0]}
             {/* If the second year isn't available, only include the first year. */}
             {props.year[1] !== undefined ? "–" + props.year[1] : ""})
@@ -40,7 +40,7 @@ function ProjectItem(props: ProjectItemProps) {
         )}
       </div>
       <p className="text-gray-400 mb-2">{props.desc}</p>
-      <ul className="flex flex-wrap gap-x-2">{createTags(props.techUsed)}</ul>
+      <ul className="flex flex-wrap gap-2">{createTags(props.techUsed)}</ul>
     </li>
   );
 }
@@ -53,11 +53,11 @@ export default function Projects(props: ProjectsSectionProps) {
   return (
     <Section
       id={props.id}
-      className={`relative ${props.className || ""}`}
+      className={`relative justify-start ${props.className || ""}`}
       fadeInDirection={props.fadeInDirection}
     >
       <h2 className="section-header">Projects Overview</h2>
-      <ul className="flex flex-col gap-y-2 mb-2">
+      <ul className="flex flex-col gap-y-2 mb-2 self-center w-full sm:max-w-9/10 lg:max-w-full">
         <ProjectItem
           title="Portfolio Website"
           link="./projects"
@@ -82,21 +82,27 @@ export default function Projects(props: ProjectsSectionProps) {
           year={["2023", "2024"]}
         />
         {props.pageLink !== undefined ? (
-          <HorizontalLine width="full" className="my-2" />
+          // The `min-[71rem]` media query ensures a smooth transition between
+          // the "See More" button's placements, specifically between 1024px
+          // and 1136px.
+          <HorizontalLine
+            width="full"
+            className="mb-8 my-2 lg:mb-6 min-[110rem]:mb-[-5rem]"
+          />
+        ) : (
+          ""
+        )}
+        {props.pageLink !== undefined ? (
+          <a
+            className="absolute bottom-5 hover:underline hover:text-cyan-500 hover:text-[1rem] translate duration-300"
+            href={props.pageLink}
+          >
+            See More ↗
+          </a>
         ) : (
           ""
         )}
       </ul>
-      {props.pageLink !== undefined ? (
-        <a
-          className="absolute bottom-5 hover:underline hover:text-cyan-500 hover:text-[1rem] translate duration-300"
-          href={props.pageLink}
-        >
-          See More ↗
-        </a>
-      ) : (
-        ""
-      )}
     </Section>
   );
 }
