@@ -27,9 +27,8 @@ export default function BlankSection(props: BlankSectionProps) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          entry.target.classList.toggle(
-            "animate-slide-in-blur",
-            entry.isIntersecting,
+          entry.target.classList.add(
+            "animate-slide-in-blur"
           );
         });
       },

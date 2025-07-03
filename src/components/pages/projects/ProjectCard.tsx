@@ -94,7 +94,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         {props.link !== undefined ? (
           <a
             ref={refLink}
-            className="animate-presets lg:delay-300 p-2 rounded-xl bg-(--section-background) flex justify-center transition duration-500 hover:bg-(--section-background-lighter)"
+            className="animate-presets p-2 rounded-xl bg-(--section-background) flex justify-center transition duration-300 hover:bg-(--section-background-lighter)"
             href={props.link}
             target="_blank"
           >
@@ -110,7 +110,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         ) : (
           <p
             ref={refLink}
-            className="animate-presets lg:delay-300 p-2 rounded-xl bg-(--section-background) flex justify-center transition duration-300 hover:bg-(--section-background-lighter) gap-x-3 items-center text-neutral-400 italic"
+            className="animate-presets p-2 rounded-xl bg-(--section-background) flex justify-center transition duration-300 hover:bg-(--section-background-lighter) gap-x-3 items-center text-neutral-400 italic"
           >
             <Image
               className="w-min aspect-auto brightness-50"
