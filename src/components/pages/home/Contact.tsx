@@ -5,6 +5,10 @@ import Section, {
 import Image from "next/image";
 import copyTextToClipboard from "@/util/copyTextToClipboard";
 
+/**
+ * We use an interface here so it's easily customizable in the homepage 
+ * later on.
+ */
 interface ContactProps extends SectionProps {
   email?: string;
   githubLink?: string;

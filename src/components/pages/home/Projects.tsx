@@ -12,6 +12,9 @@ interface ProjectItemProps {
   year?: string[];
 }
 
+/**
+ * Only used in the Projects() component below.
+ */
 function ProjectItem(props: ProjectItemProps) {
   return (
     <li>
@@ -28,9 +31,11 @@ function ProjectItem(props: ProjectItemProps) {
         {props.year !== undefined ? (
           <span className="translate-y-1.5 text-sm text-gray-500">
             ({props.year[0]}
+            {/* If the second year isn't available, only include the first year. */}
             {props.year[1] !== undefined ? "–" + props.year[1] : ""})
           </span>
         ) : (
+          // If no year was given, don't render this.
           ""
         )}
       </div>

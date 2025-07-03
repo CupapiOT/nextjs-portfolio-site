@@ -15,10 +15,13 @@ export interface BlankSectionProps {
     | "left"
     | "LEFT"
     | "right"
-    | "RIGHT";
+    | "RIGHT"
+    | "none"
+    | "NONE";
 }
 
 export default function BlankSection(props: BlankSectionProps) {
+  // This code before the return statement just handles animations.
   const ref = useRef(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,8 +55,12 @@ export default function BlankSection(props: BlankSectionProps) {
       break;
     case "left":
     case "LEFT":
-    default:
       whichDirection = "translate-x-1/3";
+      break;
+    case "none":
+    case "NONE":
+    default:
+      whichDirection = "";
       break;
   }
 

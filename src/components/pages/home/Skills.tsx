@@ -2,7 +2,6 @@ import Section, {
   BlankSectionProps as SectionProps,
 } from "@/components/layout/BlankSection";
 import Image from "next/image";
-import { ReactNode } from "react";
 import HorizontalLine from "@/components/layout/HorizontalLine";
 
 interface SkillIconProps {
@@ -10,6 +9,10 @@ interface SkillIconProps {
   alt: string;
 }
 
+/**
+ * Only used in the Skills() component below.
+ * The alt and title of the SVG are the same.
+ */
 function SkillsIcon(props: SkillIconProps) {
   return (
     <Image
@@ -23,21 +26,10 @@ function SkillsIcon(props: SkillIconProps) {
   );
 }
 
-interface SkillsH3Props {
-  children: ReactNode;
-}
-
-function SkillsH3(props: SkillsH3Props) {
-  return (
-    <h3 className="mb-4 text-center font-medium text-xl lg:text-lg">
-      {props.children}
-    </h3>
-  );
-}
-
 export default function Skills(props: SectionProps) {
   const skillsIconContainerClasses =
     "flex gap-3 flex-wrap justify-center self-center w-95/100 sm:max-w-2/3 sm:gap-5 lg:max-w-full";
+  const h3Classes = "mb-4 text-center font-medium text-xl lg:text-lg";
   return (
     <Section
       id={props.id}
@@ -47,7 +39,7 @@ export default function Skills(props: SectionProps) {
       <h2 className="section-header mb-6">
         Technologies I&apos;ve Worked With
       </h2>
-      <SkillsH3>I&apos;m Best At</SkillsH3>
+      <h3 className={h3Classes}>I&apos;m Best At</h3>
       <div className="flex justify-center">
         <SkillsIcon
           src="/src/skills/icon-python.svg"
@@ -55,7 +47,7 @@ export default function Skills(props: SectionProps) {
         />
       </div>
       <HorizontalLine className="my-4" />
-      <SkillsH3>I Also Enjoy</SkillsH3>
+      <h3 className={h3Classes}>I Also Enjoy</h3>
       <div className={skillsIconContainerClasses}>
         <SkillsIcon src="/src/skills/icon-c.svg" alt="C Programming Language" />
         <SkillsIcon src="/src/skills/icon-html5.svg" alt="HTML Language" />
@@ -73,7 +65,7 @@ export default function Skills(props: SectionProps) {
         <SkillsIcon src="/src/skills/icon-react.svg" alt="React Framework" />
       </div>
       <HorizontalLine className="my-4" />
-      <SkillsH3>Tools I Use</SkillsH3>
+      <h3 className={h3Classes}>Tools I Use</h3>
       <div className={skillsIconContainerClasses}>
         <SkillsIcon src="/src/skills/icon-git.svg" alt="Git CLI" />
         <SkillsIcon src="/src/general/icon-github.svg" alt="GitHub Website" />
