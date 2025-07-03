@@ -18,7 +18,7 @@ interface ProjectItemProps {
 function ProjectItem(props: ProjectItemProps) {
   return (
     <li>
-      <div className="flex lg:flex-col 2xl:flex-row">
+      <div className="flex lg:flex-col min-[114rem]:flex-row">
         <h3 className="text-lg mr-1 text-cyan-500">
           {props.link !== undefined ? (
             <a href={props.link} className="hover:underline">
@@ -29,7 +29,7 @@ function ProjectItem(props: ProjectItemProps) {
           )}
         </h3>
         {props.year !== undefined ? (
-          <span className="translate-y-1.5 text-sm text-gray-500 lg:translate-0 2xl:translate-y-1.5">
+          <span className="translate-y-1.5 text-sm text-gray-500 lg:translate-0 min-[114rem]:translate-y-1.5">
             ({props.year[0]}
             {/* If the second year isn't available, only include the first year. */}
             {props.year[1] !== undefined ? "–" + props.year[1] : ""})
@@ -82,12 +82,12 @@ export default function Projects(props: ProjectsSectionProps) {
           year={["2023", "2024"]}
         />
         {props.pageLink !== undefined ? (
-          // The `min-[71rem]` media query ensures a smooth transition between
+          // The `min-[114rem]` media query ensures a smooth transition between
           // the "See More" button's placements, specifically between 1024px
           // and 1136px.
           <HorizontalLine
             width="full"
-            className="mb-8 my-2 lg:mb-6 min-[110rem]:mb-[-5rem]"
+            className="mb-8 my-2 lg:mb-6 min-[114rem]:mb-[-5rem]"
           />
         ) : (
           ""

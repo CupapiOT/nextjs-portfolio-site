@@ -12,13 +12,14 @@ export default function Home() {
         ]}
         whichLink={1}
       />
-      <main className="text-lg pt-[6.5em] min-2xl:max-[130rem]:pt-[22rem] max-w-full w-full flex flex-col items-center gap-y-16">
+      <main className="min-[120rem]:pt-[22rem] min-[130rem]:pt-[1rem] text-lg max-w-full w-full flex flex-col items-center gap-y-16">
         <ProjectCard
           id="simple-portfolio-site"
           title="Simple Portfolio Site"
           imgSrc="/src/projects/portfolio-site.webp"
           desc="Designed and actively maintaining a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and reinforcing core web development skills."
-          link="https://cupapiot.github.io"
+          gitHubLink="https://github.com/CupapiOT/CupapiOT.github.io"
+          websiteLink="https://cupapiot.github.io"
           year={["2024", "2025"]}
           techUsed={["HTML", "CSS", "JavaScript"]}
         />
@@ -27,7 +28,7 @@ export default function Home() {
           title="Matrix Visualizer Web-app"
           imgSrc="/src/projects/animated-matrices.webp"
           desc="A self-initiated project to help visualize linear algebra transformations, built to deepen my understanding of matrix math. Open source on GitHub."
-          link="https://github.com/CupapiOT/animated-matrices"
+          gitHubLink="https://github.com/CupapiOT/animated-matrices"
           year={["2024", "PRESENT"]}
           techUsed={["Python", "Python Dash", "Python Plotly"]}
         />
@@ -36,7 +37,7 @@ export default function Home() {
           title="Image References Desktop App"
           imgSrc="/src/projects/image-references.webp"
           desc="Handled all aspects solo in building a reference-sketching tool for a professional artist (my brother). Evolved through regular feedback, for practicality and ease of use."
-          link="https://github.com/CupapiOT/croquis-image-references"
+          gitHubLink="https://github.com/CupapiOT/croquis-image-references"
           year={["2023", "2024"]}
           techUsed={["Python", "CustomTkinter"]}
         />

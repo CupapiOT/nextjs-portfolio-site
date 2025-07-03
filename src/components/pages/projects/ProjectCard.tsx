@@ -10,7 +10,8 @@ interface ProjectCardProps {
   imgSrc: string;
   desc: string;
   techUsed: string[];
-  link?: string;
+  gitHubLink?: string;
+  websiteLink?: string;
   year?: string[];
 }
 
@@ -40,10 +41,16 @@ export default function ProjectCard(props: ProjectCardProps) {
 
   const refImg = useRef(null);
   const refCard = useRef(null);
-  const refLink = useRef(null);
+  const refGitHubLink = useRef(null);
+  const refWebsiteLink = useRef(null);
   useIntersectionAnimation(refImg);
   useIntersectionAnimation(refCard);
-  useIntersectionAnimation(refLink);
+  useIntersectionAnimation(refGitHubLink);
+  useIntersectionAnimation(refWebsiteLink);
+
+  const linkClasses =
+    "animate-presets p-2 sm:p-4 rounded-xl bg-(--section-background) flex justify-center transition duration-300";
+  const linkImageClasses = "max-w-[3em] aspect-auto";
 
   return (
     <article
@@ -91,38 +98,62 @@ export default function ProjectCard(props: ProjectCardProps) {
             {createTags(props.techUsed)}
           </ul>
         </div>
-        {props.link !== undefined ? (
-          <a
-            ref={refLink}
-            className="animate-presets p-2 rounded-xl bg-(--section-background) flex justify-center transition duration-300 hover:bg-(--section-background-lighter)"
-            href={props.link}
-            target="_blank"
-          >
-            <Image
-              className="w-min aspect-auto"
-              src="/src/general/icon-link.svg"
-              alt="Link to this project"
-              title="Link to this project"
-              width={9999}
-              height={9999}
-            />
-          </a>
-        ) : (
-          <p
-            ref={refLink}
-            className="animate-presets p-2 rounded-xl bg-(--section-background) flex justify-center transition duration-300 hover:bg-(--section-background-lighter) gap-x-3 items-center text-neutral-400 italic"
-          >
-            <Image
-              className="w-min aspect-auto brightness-50"
-              src="/src/general/icon-link.svg"
-              alt="Link to this project"
-              title="Link to this project"
-              width={9999}
-              height={9999}
-            />
-            Coming Soon!
-          </p>
-        )}
+        <div className={`grid gap-x-4 ${props.websiteLink !== undefined ? "grid-cols-2" : ""}`}>
+          {props.gitHubLink !== undefined ? (
+            <a
+              ref={refGitHubLink}
+              className={`${linkClasses} hover:bg-(--section-background-lighter)`}
+              href={props.gitHubLink}
+              target="_blank"
+              title="GitHub link to this project"
+            >
+              <Image
+                className={linkImageClasses}
+                src="/src/general/icon-github.svg"
+                alt="GitHub link to this project"
+                title="GitHub link to this project"
+                width={9999}
+                height={9999}
+              />
+            </a>
+          ) : (
+            <p
+              ref={refGitHubLink}
+              className={`${linkClasses} gap-x-3 items-center text-neutral-400 italic`}
+              title="GitHub link to this project (Coming Soon!)"
+            >
+              <Image
+                className={`${linkImageClasses} brightness-50`}
+                src="/src/general/icon-github.svg"
+                alt="GitHub link to this project (Coming Soon!)"
+                title="GitHub link to this project (Coming Soon!)"
+                width={9999}
+                height={9999}
+              />
+              Coming Soon!
+            </p>
+          )}
+          {props.websiteLink !== undefined ? (
+            <a
+              ref={refWebsiteLink}
+              className={`${linkClasses} hover:bg-(--section-background-lighter)`}
+              href={props.websiteLink}
+              target="_blank"
+              title="Website link to this project"
+            >
+              <Image
+                className={linkImageClasses}
+                src="/src/general/icon-link.svg"
+                alt="Website link to this project"
+              title="Website link to this project"
+                width={9999}
+                height={9999}
+              />
+            </a>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </article>
   );
