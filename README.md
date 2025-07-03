@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio Site
 
-## Getting Started
+Welcome to my portfolio site! Feel free to look around or [visit the website](https://marvel-orleans.vercel.app/) directly.
 
-First, run the development server:
+## Description
+
+It's open source &mdash; feel free to use it as a reference for your own website or for any other purpose, as long as it complies with the Apache 2.0 License. See the section near the bottom for more details.
+
+### Features
+
+- Semantic HTML layout for better accessibility and SEO.
+- A fully responsive design.
+- Two pages, one home and one projects.
+- A short and sweet user experience for desktop users (no scrolling needed for
+  the homepage!)
+- In terms of code, it's very modular and easy to customize.
+
+### Built With
+
+- [![Next][Next.js]][Next-url]
+- [![React][React.js]][React-url]
+- [![Tailwind][TailwindCSS]][Tailwind-url]
+
+## Getting started
+
+To use or explore the code of this site:
+
+- Fork the repository.
+- Clone your fork locally.
+- Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Help and Contributions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+While I’m **not open to Pull Requests** right now since I’m satisfied with the current state of the site, I’m always happy to discuss improvements! Feel free to [open an issue](https://github.com/CupapiOT/nextjs-portfolio-site/issues) on GitHub if you have questions or suggestions.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Author
 
-## Learn More
+[@CupapiOT](https://github.com/CupapiOT)
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the Apache 2.0 License &mdash; see the [LICENSE](LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<!-- Variables -->
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/cknowledgments
+[TailwindCSS]: https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss
+[Tailwind-url]: https://tailwindcss.com/
