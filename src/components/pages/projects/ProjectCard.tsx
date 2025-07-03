@@ -71,13 +71,13 @@ export default function ProjectCard(props: ProjectCardProps) {
       </h2>
       <Image
         ref={refImg}
-        className="animate-presets w-full aspect-auto object-cover rounded-xl lg:aspect-video lg:w-4/10"
+        className="animate-presets w-full aspect-auto object-cover rounded-xl lg:aspect-video lg:w-[min(30rem,40%)]"
         src={props.imgSrc}
         alt={props.title}
         width={9999}
         height={9999}
       />
-      <div className="lg:h-full flex flex-col gap-y-4">
+      <div className="lg:h-full flex flex-col gap-y-4 w-full">
         <div
           ref={refCard}
           className="animate-presets -translate-y-1/5 lg:delay-150 blur-xs flex flex-col p-4 rounded-xl bg-(--section-background) gap-y-3"

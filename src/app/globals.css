@@ -25,15 +25,6 @@
   }
 }
 
-/* Responsiveness for Ultra-Wide (4K) screens.
- * I'm simply scaling up the page.
- */
-@media (width >= 2080px) {
-  html {
-    font-size: 20px;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
