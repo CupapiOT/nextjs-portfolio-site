@@ -3,6 +3,7 @@ import Section, {
 } from "@/components/layout/BlankSection";
 import Image from "next/image";
 import HorizontalLine from "@/components/layout/HorizontalLine";
+import ThemeSensitiveImage from "@/components/layout/ThemeSensitiveImage";
 
 interface SkillIconProps {
   src: string;
@@ -61,14 +62,24 @@ export default function Skills(props: SectionProps) {
           alt="Python Programming Language"
         />
         <SkillsIcon src="/src/skills/icon-tailwindcss.svg" alt="Tailwind CSS" />
-        <SkillsIcon src="/src/skills/icon-nextjs.svg" alt="NextJS Framework" />
+        <ThemeSensitiveImage
+          className="aspect-square w-[3.5em] lg:w-[3em]"
+          lightImage="/src/skills/icon-nextjs-black.svg"
+          darkImage="/src/skills/icon-nextjs-white.svg"
+          alt="NextJS Framework"
+        />
         <SkillsIcon src="/src/skills/icon-react.svg" alt="React Framework" />
       </div>
       <HorizontalLine className="my-4" />
       <h3 className={h3Classes}>Tools I Use</h3>
       <div className={skillsIconContainerClasses}>
         <SkillsIcon src="/src/skills/icon-git.svg" alt="Git CLI" />
-        <SkillsIcon src="/src/general/icon-github.svg" alt="GitHub Website" />
+        <ThemeSensitiveImage
+          className="aspect-square w-[3.5em] lg:w-[3em]"
+          lightImage="/src/general/icon-github-black.svg"
+          darkImage="/src/general/icon-github-white.svg"
+          alt="GitHub Website"
+        />
       </div>
     </Section>
   );

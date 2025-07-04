@@ -2,6 +2,7 @@
 import Image from "next/image";
 import createTags from "@/components/layout/createTags";
 import { useRef, useEffect } from "react";
+import ThemeSensitiveImage from "@/components/layout/ThemeSensitiveImage";
 
 interface ProjectCardProps {
   id?: string;
@@ -61,7 +62,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       <h2 className="font-bold text-3xl flex flex-col gap-y-1 lg:hidden">
         {props.title}
         {props.year !== undefined ? (
-          <p className="text-sm text-gray-500">
+          <p className="project-year-text">
             ({props.year[0]}
             {props.year[1] !== undefined ? "–" + props.year[1] : ""})
           </p>
@@ -85,7 +86,7 @@ export default function ProjectCard(props: ProjectCardProps) {
           <h2 className="hidden font-bold text-3xl flex-col gap-y-1 lg:block">
             {props.title}
             {props.year !== undefined ? (
-              <p className="text-sm text-gray-500">
+              <p className="project-year-text">
                 ({props.year[0]}
                 {props.year[1] !== undefined ? "–" + props.year[1] : ""})
               </p>
@@ -93,27 +94,29 @@ export default function ProjectCard(props: ProjectCardProps) {
               ""
             )}
           </h2>
-          <p className="text-justify text-gray-300">{props.desc}</p>
+          <p className="text-justify text-gray-700 dark:text-gray-300">
+            {props.desc}
+          </p>
           <ul className="flex flex-wrap gap-x-2">
             {createTags(props.techUsed)}
           </ul>
         </div>
-        <div className={`grid gap-x-4 ${props.websiteLink !== undefined ? "grid-cols-2" : ""}`}>
+        <div
+          className={`grid gap-x-4 ${props.websiteLink !== undefined ? "grid-cols-2" : ""}`}
+        >
           {props.gitHubLink !== undefined ? (
             <a
               ref={refGitHubLink}
-              className={`${linkClasses} hover:bg-(--section-background-lighter)`}
+              className={`${linkClasses} hover:bg-(--contact-button-bg)`}
               href={props.gitHubLink}
               target="_blank"
               title="GitHub link to this project"
             >
-              <Image
+              <ThemeSensitiveImage
                 className={linkImageClasses}
-                src="/src/general/icon-github.svg"
+                lightImage="/src/general/icon-github-black.svg"
+                darkImage="/src/general/icon-github-white.svg"
                 alt="GitHub link to this project"
-                title="GitHub link to this project"
-                width={9999}
-                height={9999}
               />
             </a>
           ) : (
@@ -122,13 +125,11 @@ export default function ProjectCard(props: ProjectCardProps) {
               className={`${linkClasses} gap-x-3 items-center text-neutral-400 italic`}
               title="GitHub link to this project (Coming Soon!)"
             >
-              <Image
+              <ThemeSensitiveImage
                 className={`${linkImageClasses} brightness-50`}
-                src="/src/general/icon-github.svg"
+                lightImage="/src/general/icon-github-black.svg"
+                darkImage="/src/general/icon-github-white.svg"
                 alt="GitHub link to this project (Coming Soon!)"
-                title="GitHub link to this project (Coming Soon!)"
-                width={9999}
-                height={9999}
               />
               Coming Soon!
             </p>
@@ -136,18 +137,16 @@ export default function ProjectCard(props: ProjectCardProps) {
           {props.websiteLink !== undefined ? (
             <a
               ref={refWebsiteLink}
-              className={`${linkClasses} hover:bg-(--section-background-lighter)`}
+              className={`${linkClasses} hover:bg-(--contact-button-bg)`}
               href={props.websiteLink}
               target="_blank"
               title="Website link to this project"
             >
-              <Image
+              <ThemeSensitiveImage
                 className={linkImageClasses}
-                src="/src/general/icon-link.svg"
+                lightImage="/src/general/icon-link-black.svg"
+                darkImage="/src/general/icon-link-white.svg"
                 alt="Website link to this project"
-              title="Website link to this project"
-                width={9999}
-                height={9999}
               />
             </a>
           ) : (

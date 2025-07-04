@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --horizontal-line-color: #313131;
-  --section-background: #18181b;
-  --section-background-lighter: #28282b;
-  --section-background-lightest: #38383b;
-  --navbar-link: #a1a1aa;
-  --navbar-link-hover: #666666;
+  --background: #f7f7f6;
+  --foreground: #222222;
+  --section-background: #fcfcfb;
+  --section-background-lighter: #fefefd;
+  --horizontal-line-color: #ededed;
+  --navbar-background: #f7f7f680;
+  --navbar-link: #5e5e55;
+  --navbar-link-bg: #f4f4f4;
+  --navbar-link-hover: #9a9a99;
+  --contact-button-bg: #f1f1f0;
+  --contact-button-hover: #e8e8e7;
 }
 
 @theme inline {
@@ -22,6 +25,15 @@
   :root {
     --background: #0a0a0a;
     --foreground: #eeeeee;
+    --section-background: #18181b;
+    --section-background-lighter: #28282b;
+    --horizontal-line-color: #313131;
+    --navbar-background: #0a0a0a80;
+    --navbar-link: #a1a1aa;
+    --navbar-link-bg: #383838;
+    --navbar-link-hover: #66666b;
+    --contact-button-bg: #28282b;
+    --contact-button-hover: #38383b;
   }
 }
 
@@ -63,6 +75,10 @@ body {
   border-right: 10px solid var(--horizontal-line-color);
 }
 
+.project-year-text {
+  @apply text-sm text-gray-500;
+}
+
 /* Section Header */
 
 /* `2.5xl` is too finnicky to make work so `2point5` it is. */
@@ -97,4 +113,3 @@ body {
 .animate-slide-in-blur {
   @apply opacity-100 translate-0 blur-none;
 }
-

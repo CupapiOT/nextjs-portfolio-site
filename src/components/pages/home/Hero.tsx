@@ -20,7 +20,7 @@ export default function Hero(props: SectionProps) {
         width={9999}
         height={9999}
       />
-      <p className="text-sm font-mono text-center text-gray-300">
+      <p className="text-sm font-mono text-center text-gray-700 dark:text-gray-300">
         Based in Indonesia
       </p>
     </Section>

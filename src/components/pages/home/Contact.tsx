@@ -2,8 +2,8 @@
 import Section, {
   BlankSectionProps as SectionProps,
 } from "@/components/layout/BlankSection";
-import Image from "next/image";
 import copyTextToClipboard from "@/util/copyTextToClipboard";
+import ThemeSensitiveImage from "@/components/layout/ThemeSensitiveImage";
 
 /**
  * We use an interface here so it's easily customizable in the homepage
@@ -18,7 +18,8 @@ interface ContactProps extends SectionProps {
 
 export default function Contact(props: ContactProps) {
   const buttonClasses =
-    "w-full sm:max-w-4/5 lg:max-w-full lg:h-full grid grid-cols-[2em_1fr] items-center p-2 px-5 gap-x-4 bg-(--section-background-lighter) rounded-xl cursor-pointer transform duration-300 hover:bg-(--section-background-lightest) hover:scale-[101%] shadow-none hover:shadow-lg";
+    "w-full sm:max-w-4/5 lg:max-w-full lg:h-full grid grid-cols-[2em_1fr] items-center p-2 px-5 gap-x-4 rounded-xl cursor-pointer " +
+    "bg-(--contact-button-bg) hover:bg-(--contact-button-hover) transform duration-300 hover:scale-[101%] hover:shadow-md dark:hover:shadow-lg";
   const spanClasses =
     "w-full text-left text-[min(clamp(calc(0.45em+2vw),calc(0.6em+1vw),1em),_1.25em)] " +
     "max-[24rem]:text-sm max-[22rem]:text-[0.75em]";
@@ -33,12 +34,11 @@ export default function Contact(props: ContactProps) {
         onClick={() => copyTextToClipboard(props.email)}
         className={buttonClasses + (props.email !== undefined ? "" : " hidden")}
       >
-        <Image
+        <ThemeSensitiveImage
           className={imgClasses}
-          src="/src/general/icon-email.svg"
-          alt="Email Icon"
-          width={9999}
-          height={9999}
+          lightImage="/src/general/icon-email-black.svg"
+          darkImage="/src/general/icon-email-white.svg"
+          alt="Email icon"
         />
         <span className={spanClasses}>{props.email}</span>
       </button>
@@ -49,12 +49,11 @@ export default function Contact(props: ContactProps) {
           buttonClasses + (props.githubLink !== undefined ? "" : " hidden")
         }
       >
-        <Image
+        <ThemeSensitiveImage
           className={imgClasses}
-          src="/src/general/icon-github.svg"
-          alt="Github Icon"
-          width={9999}
-          height={9999}
+          lightImage="/src/general/icon-github-black.svg"
+          darkImage="/src/general/icon-github-white.svg"
+          alt="GitHub icon"
         />
         <span className={spanClasses}>{props.githubName}</span>
       </a>
@@ -65,12 +64,11 @@ export default function Contact(props: ContactProps) {
           buttonClasses + (props.resumeSrc !== undefined ? "" : " hidden")
         }
       >
-        <Image
+        <ThemeSensitiveImage
           className={imgClasses}
-          src="/src/general/icon-docs.svg"
-          alt="Document Icon"
-          width={9999}
-          height={9999}
+          lightImage="/src/general/icon-docs-black.svg"
+          darkImage="/src/general/icon-docs-white.svg"
+          alt="Document icon"
         />
         <span className={spanClasses}>Download my CV</span>
       </a>

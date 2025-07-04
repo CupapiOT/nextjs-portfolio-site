@@ -19,7 +19,7 @@ function ProjectItem(props: ProjectItemProps) {
   return (
     <li>
       <div className="flex lg:flex-col min-[114rem]:flex-row">
-        <h3 className="text-lg mr-1 text-cyan-500">
+        <h3 className="text-lg mr-1 text-cyan-600 dark:text-cyan-500">
           {props.link !== undefined ? (
             <a href={props.link} className="hover:underline">
               {props.title}🔗
@@ -29,7 +29,7 @@ function ProjectItem(props: ProjectItemProps) {
           )}
         </h3>
         {props.year !== undefined ? (
-          <span className="translate-y-1.5 text-sm text-gray-500 lg:translate-0 min-[114rem]:translate-y-1.5">
+          <span className="translate-y-1.5 project-year-text lg:translate-0 min-[114rem]:translate-y-1.5">
             ({props.year[0]}
             {/* If the second year isn't available, only include the first year. */}
             {props.year[1] !== undefined ? "–" + props.year[1] : ""})
@@ -39,7 +39,7 @@ function ProjectItem(props: ProjectItemProps) {
           ""
         )}
       </div>
-      <p className="text-gray-400 mb-2">{props.desc}</p>
+      <p className="text-gray-600 dark:text-gray-400 mb-2">{props.desc}</p>
       <ul className="flex flex-wrap gap-2">{createTags(props.techUsed)}</ul>
     </li>
   );
