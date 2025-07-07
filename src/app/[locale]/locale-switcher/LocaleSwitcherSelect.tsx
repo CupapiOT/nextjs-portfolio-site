@@ -38,7 +38,7 @@ export default function LocaleSwitcherSelect(props: LocaleSwitcherSelectProps) {
       >
         <p className="sr-only">{props.label}</p>
         <select
-          className="p-0.5 text-gray-400 dark:text-gray-600 bg-transparent focus:text-gray-700 focus:bg-[#ffffff] focus:dark:text-gray-300 focus:dark:bg-[#222222] rounded-t-lg border-none cursor-pointer"
+          className="p-0.5 text-gray-400 dark:text-gray-600 bg-transparent focus:text-gray-700 focus:bg-[#ffffff] focus:dark:text-gray-300 focus:dark:bg-[#222222] max-lg:rounded-lg rounded-t-lg border-none cursor-pointer"
           name="locale-switcher-select"
           id="locale-switcher-select"
           defaultValue={props.defaultValue}

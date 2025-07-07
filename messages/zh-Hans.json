@@ -31,9 +31,9 @@
     },
     "projects": {
       "title": "项目概览",
-      "portfolioWebsite": {
-        "title": "个人作品集网站",
-        "desc": "一个人简单的网站，用于展示我的技能。开启了我的前端之路。"
+      "nextjsPortfolioWebsite": {
+        "title": "NextJS 作品集网站",
+        "desc": "响应式且支持多语言，使用现代技术构建——配有浅色和深色主题。"
       },
       "matrixVisualizerWebApp": {
         "title": "二维矩阵可视化工具",
@@ -58,9 +58,13 @@
     }
   },
   "projectsPage": {
+    "nextjsPortfolioSite": {
+      "title": "NextJS 作品集网站",
+      "desc": "一个由我独立开发并持续完善的作品集网站——支持浅色和深色模式，同时提供三种语言，其中中文包含简体和繁体两种书写方式。"
+    },
     "simplePortfolioSite": {
       "title": "简单的个人作品集网站",
-      "desc": "使用标准的 HTML、CSS 和 JavaScript 设计并持续维护的个人作品集网站——注重简洁性并巩固核心前端技能。"
+      "desc": "使用标准的 HTML、CSS 和 JS 设计了个人作品网站——专注于简洁性和学习核心的网页开发技能。"
     },
     "matrixVisualizerWebApp": {
       "title": "矩阵可视化 Web 应用",

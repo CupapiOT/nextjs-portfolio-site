@@ -7,6 +7,7 @@ export default function Home() {
   const navbarText = useTranslations("navbar");
   const presentDateText = useTranslations("otherText");
   const portfolioSiteText = useTranslations("projectsPage.simplePortfolioSite");
+  const nextjsPortfolioSiteText = useTranslations("projectsPage.nextjsPortfolioSite");
   const matrixVisualizerText = useTranslations(
     "projectsPage.matrixVisualizerWebApp",
   );
@@ -24,7 +25,16 @@ export default function Home() {
       />
       <main className="pt-[6rem] text-lg max-w-full w-full flex flex-col items-center justify-center gap-y-16">
         <ProjectCard
-          id="portfolio-site"
+          id="nextjs-portfolio-site"
+          title={nextjsPortfolioSiteText("title")}
+          imgSrc="/src/projects/nextjs-portfolio-site.webp"
+          desc={nextjsPortfolioSiteText("desc")}
+          gitHubLink="https://github.com/CupapiOT/nextjs-portfolio-site"
+          year={["2025"]}
+          techUsed={["NextJS", "React", "TailwindCSS", "TS"]}
+        />
+        <ProjectCard
+          id="simple-portfolio-site"
           title={portfolioSiteText("title")}
           imgSrc="/src/projects/portfolio-site.webp"
           desc={portfolioSiteText("desc")}

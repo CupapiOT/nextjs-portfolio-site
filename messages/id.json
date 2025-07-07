@@ -12,8 +12,8 @@
     "localeNames": {
       "en": "Inggris",
       "id": "Indonesia",
-      "zh-Hans": "Tionghoa (Sederhana)",
-      "zh-Hant": "Tionghoa (Tradisional)",
+      "zh-Hans": "Mandarin (Sederhana)",
+      "zh-Hant": "Mandarin (Tradisional)",
       "unknown": "Tidak Diketahui"
     }
   },
@@ -27,13 +27,13 @@
     },
     "about": {
       "title": "Siapakah Aku?",
-      "desc": "Hai, saya Marvel Orleans. 👋 Saya anak SMK di Indonesia yang suka programming. Setelah belajar sendiri lebih dari dua tahun, saya juga punya beberapa side project sebagai bukti. Kalau Anda punya proyek yang ingin dikerjakan bersama, jangan ragu menghubungi saya!"
+      "desc": "Hai, saya Marvel Orleans 👋, anak SMK di Indonesia yang suka programming. Setelah belajar sendiri lebih dari dua tahun, saya juga punya beberapa side project sebagai bukti. Kalau Anda punya proyek yang ingin dikerjakan bersama, jangan ragu menghubungi saya!"
     },
     "projects": {
       "title": "Proyek Saya",
-      "portfolioWebsite": {
-        "title": "Situs Portofolio",
-        "desc": "Situs sederhana untuk menampilkan keterampilan saya. Ini awal perjalanan saya di bidang front-end."
+      "nextjsPortfolioWebsite": {
+        "title": "Situs Portofolio NextJS",
+        "desc": "Responsif dan multibahasa, dibuat dengan alat modern—lengkap dengan tema terang dan gelap."
       },
       "matrixVisualizerWebApp": {
         "title": "Visualisasi Matriks",
@@ -58,9 +58,13 @@
     }
   },
   "projectsPage": {
+    "nextjsPortfolioSite": {
+      "title": "Situs Portofolio NextJS",
+      "desc": "Situs portofolio kaya-fitur yang saya bangun dari nol dan terus saya kembangkan dengan teknologi lebih modern—mendukung mode terang/gelap serta tiga bahasa, termasuk dua versi aksara untuk bahasa Mandarin."
+    },
     "simplePortfolioSite": {
       "title": "Situs Portofolio Sederhana",
-      "desc": "Merancang dan secara aktif memelihara situs portofolio pribadi menggunakan HTML, CSS, dan JavaScript standar. Berfokus pada kesederhanaan dan pengembangan keterampilan dasar pengembangan web."
+      "desc": "Merancang situs portofolio pribadi menggunakan HTML, CSS, dan JavaScript standar. Berfokus pada kesederhanaan dan pengembangan keterampilan dasar pengembangan web."
     },
     "matrixVisualizerWebApp": {
       "title": "Aplikasi Web Visualisasi Matriks",

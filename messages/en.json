@@ -31,9 +31,9 @@
     },
     "projects": {
       "title": "Projects Overview",
-      "portfolioWebsite": {
-        "title": "Simple Portfolio Site",
-        "desc": "A simple website to showcase my skills. Kickstarted my front-end journey."
+      "nextjsPortfolioWebsite": {
+        "title": "NextJS Portfolio Site",
+        "desc": "Responsive and multilingual, built with modern tech—complete with light and dark themes."
       },
       "matrixVisualizerWebApp": {
         "title": "2D Matrix Visualizer",
@@ -58,9 +58,13 @@
     }
   },
   "projectsPage": {
+    "nextjsPortfolioSite": {
+      "title": "NextJS Portfolio Site",
+      "desc": "A polished, evolving portfolio site built from scratch—now with light/dark mode and support for three languages, including both Chinese scripts."
+    },
     "simplePortfolioSite": {
       "title": "Simple Portfolio Site",
-      "desc": "Designed and actively maintaining a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and reinforcing core web development skills."
+      "desc": "Designed a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and learning core web development skills."
     },
     "matrixVisualizerWebApp": {
       "title": "Matrix Visualizer Web-app",

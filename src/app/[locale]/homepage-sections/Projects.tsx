@@ -53,8 +53,8 @@ interface ProjectsSectionProps extends SectionProps {
 export default function Projects(props: ProjectsSectionProps) {
   const projectsText = useTranslations("homePage.projects");
   const presentDateText = useTranslations("otherText");
-  const portfolioWebsiteText = useTranslations(
-    "homePage.projects.portfolioWebsite",
+  const nextjsPortfolioWebsiteText = useTranslations(
+    "homePage.projects.nextjsPortfolioWebsite",
   );
   const matrixVisualizerWebApp = useTranslations(
     "homePage.projects.matrixVisualizerWebApp",
@@ -72,11 +72,11 @@ export default function Projects(props: ProjectsSectionProps) {
       <h2 className="section-header">{projectsText("title")}</h2>
       <ul className="flex flex-col gap-y-2 mb-2 self-center w-full sm:max-w-9/10 lg:max-w-full">
         <ProjectItem
-          title={portfolioWebsiteText("title")}
-          desc={portfolioWebsiteText("desc")}
+          title={nextjsPortfolioWebsiteText("title")}
+          desc={nextjsPortfolioWebsiteText("desc")}
           link="./projects"
-          year={["2024", "2025"]}
-          techUsed={["HTML", "CSS", "JS"]}
+          year={["2025"]}
+          techUsed={["NextJS", "React", "TailwindCSS", "TS"]}
         />
         <HorizontalLine width="full" className="my-2" />
         <ProjectItem
