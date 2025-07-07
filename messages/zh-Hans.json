@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "Marvel Orleans",
+    "desc": "Marvel Orleans 的作品集网站"
+  },
+  "navbar": {
+    "home": "首页",
+    "projects": "项目"
+  },
+  "localeSwitcher": {
+    "label": "切换语言",
+    "localeNames": {
+      "en": "英语",
+      "id": "印尼语",
+      "zh-Hans": "简体中文",
+      "zh-Hant": "繁體中文",
+      "unknown": "未知"
+    }
+  },
+  "homePage": {
+    "hero": {
+      "profileImgAlt": "我的照片",
+      "location": "位于印度尼西亚"
+    },
+    "intro": {
+      "text": "学生 & 开发者"
+    },
+    "about": {
+      "title": "我是谁？",
+      "desc": "你好，我是 Marvel Orleans。👋 我是来自印度尼西亚的一名高中生，对编程充满热情。我已经自学编程两年多了，并独立完成了一些小项目作为成果展示。除此之外，我也学中文学了五个多月，希望以后能用中文和更多人交流。如果你有感兴趣的项目，欢迎随时联系我。"
+    },
+    "projects": {
+      "title": "项目概览",
+      "portfolioWebsite": {
+        "title": "个人作品集网站",
+        "desc": "一个人简单的网站，用于展示我的技能。开启了我的前端之路。"
+      },
+      "matrixVisualizerWebApp": {
+        "title": "二维矩阵可视化工具",
+        "desc": "帮助学生通过可视化和交互方式学习线性代数中的矩阵概念。"
+      },
+      "imageReferencesApp": {
+        "title": "Croquis 桌面应用",
+        "desc": "一款专业画师每天使用的参考图绘画工具。"
+      },
+      "seeMoreLink": "查看更多"
+    },
+    "skills": {
+      "title": "我使用过的技术",
+      "best": "我最擅长",
+      "other": "我也熟悉",
+      "tools": "我常用的工具"
+    },
+    "contact": {
+      "copyEmail": "点击复制我的邮箱",
+      "visitGitHub": "访问我的 GitHub 主页",
+      "resumeDownload": "下载我的简历"
+    }
+  },
+  "projectsPage": {
+    "simplePortfolioSite": {
+      "title": "简单的个人作品集网站",
+      "desc": "使用标准的 HTML、CSS 和 JavaScript 设计并持续维护的个人作品集网站——注重简洁性并巩固核心前端技能。"
+    },
+    "matrixVisualizerWebApp": {
+      "title": "矩阵可视化 Web 应用",
+      "desc": "一个自发启动的项目，旨在帮助可视化线性代数中的变换，加深我对矩阵数学的理解。已开源并托管在 GitHub 上。"
+    },
+    "imageReferencesDesktopApp": {
+      "title": "Croquis 图像参考桌面应用",
+      "desc": "独立完成的参考图绘画工具，为我哥哥（专业画师）开发。该工具在反复的反馈中不断完善，更加实用且易于使用。"
+    },
+    "githubAlt": "该项目的 GitHub 链接",
+    "websiteAlt": "该项目的网站链接",
+    "comingSoon": "即将上线！"
+  },
+  "iconsAlt": {
+    "python": "Python 编程语言",
+    "c": "C 编程语言",
+    "html": "HTML 语言",
+    "css": "CSS 语言",
+    "javascript": "JavaScript 编程语言",
+    "typescript": "TypeScript 编程语言",
+    "tailwindcss": "Tailwind CSS",
+    "nextjs": "NextJS 框架",
+    "reactjs": "React 库",
+    "git": "Git 版本控制",
+    "github": "GitHub",
+    "email": "电子邮箱",
+    "document": "文档图标"
+  },
+  "otherText": {
+    "presentDate": "至今"
+  }
+}

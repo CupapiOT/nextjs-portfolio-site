@@ -1,9 +1,10 @@
 import Section, {
   BlankSectionProps as SectionProps,
-} from "@/components/layout/BlankSection";
+} from "@/components/BlankSection";
 import Image from "next/image";
-import HorizontalLine from "@/components/layout/HorizontalLine";
-import ThemeSensitiveImage from "@/components/layout/ThemeSensitiveImage";
+import HorizontalLine from "@/components/HorizontalLine";
+import ThemeSensitiveImage from "@/components/ThemeSensitiveImage";
+import { useTranslations } from "next-intl";
 
 interface SkillIconProps {
   src: string;
@@ -28,6 +29,8 @@ function SkillsIcon(props: SkillIconProps) {
 }
 
 export default function Skills(props: SectionProps) {
+  const headerText = useTranslations("homePage.skills");
+  const skillsAlts = useTranslations("iconsAlt");
   const skillsIconContainerClasses =
     "flex gap-3 flex-wrap justify-center self-center w-95/100 sm:max-w-2/3 sm:gap-5 lg:max-w-full";
   const h3Classes = "mb-4 text-center font-medium text-xl lg:text-lg";
@@ -37,48 +40,46 @@ export default function Skills(props: SectionProps) {
       className={props.className}
       fadeInDirection={props.fadeInDirection}
     >
-      <h2 className="section-header mb-6">
-        Technologies I&apos;ve Worked With
-      </h2>
-      <h3 className={h3Classes}>I&apos;m Best At</h3>
+      <h2 className="section-header mb-6">{headerText("title")}</h2>
+      <h3 className={h3Classes}>{headerText("best")}</h3>
       <div className="flex justify-center">
         <SkillsIcon
           src="/src/skills/icon-python.svg"
-          alt="Python Programming Language"
+          alt={skillsAlts("python")}
         />
       </div>
       <HorizontalLine className="my-4" />
-      <h3 className={h3Classes}>I Also Enjoy</h3>
+      <h3 className={h3Classes}>{headerText("other")}</h3>
       <div className={skillsIconContainerClasses}>
-        <SkillsIcon src="/src/skills/icon-c.svg" alt="C Programming Language" />
-        <SkillsIcon src="/src/skills/icon-html5.svg" alt="HTML Language" />
-        <SkillsIcon src="/src/skills/icon-css.svg" alt="CSS Language" />
+        <SkillsIcon src="/src/skills/icon-c.svg" alt={skillsAlts("c")} />
+        <SkillsIcon src="/src/skills/icon-html.svg" alt={skillsAlts("html")} />
+        <SkillsIcon src="/src/skills/icon-css.svg" alt={skillsAlts("css")} />
         <SkillsIcon
           src="/src/skills/icon-javascript.svg"
-          alt="Javascript Programming Language"
+          alt={skillsAlts("javascript")}
         />
         <SkillsIcon
           src="/src/skills/icon-typescript.svg"
-          alt="Python Programming Language"
+          alt={skillsAlts("typescript")}
         />
         <SkillsIcon src="/src/skills/icon-tailwindcss.svg" alt="Tailwind CSS" />
         <ThemeSensitiveImage
           className="aspect-square w-[3.5em] lg:w-[3em]"
           lightImage="/src/skills/icon-nextjs-black.svg"
           darkImage="/src/skills/icon-nextjs-white.svg"
-          alt="NextJS Framework"
+          alt={skillsAlts("nextjs")}
         />
         <SkillsIcon src="/src/skills/icon-react.svg" alt="React Framework" />
       </div>
       <HorizontalLine className="my-4" />
-      <h3 className={h3Classes}>Tools I Use</h3>
+      <h3 className={h3Classes}>{headerText("tools")}</h3>
       <div className={skillsIconContainerClasses}>
-        <SkillsIcon src="/src/skills/icon-git.svg" alt="Git CLI" />
+        <SkillsIcon src="/src/skills/icon-git.svg" alt={skillsAlts("git")} />
         <ThemeSensitiveImage
           className="aspect-square w-[3.5em] lg:w-[3em]"
           lightImage="/src/general/icon-github-black.svg"
           darkImage="/src/general/icon-github-white.svg"
-          alt="GitHub Website"
+          alt={skillsAlts("github")}
         />
       </div>
     </Section>

@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "Marvel Orleans",
+    "desc": "Marvel Orleans' Portfolio Site"
+  },
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects"
+  },
+  "localeSwitcher": {
+    "label": "Change Languages",
+    "localeNames": {
+      "en": "English",
+      "id": "Indonesian",
+      "zh-Hans": "Chinese (Simplified)",
+      "zh-Hant": "Chinese (Traditional)",
+      "unknown": "Unknown"
+    }
+  },
+  "homePage": {
+    "hero": {
+      "profileImgAlt": "A photo of me.",
+      "location": "Based in Indonesia"
+    },
+    "intro": {
+      "text": "Student & Developer"
+    },
+    "about": {
+      "title": "Who am I?",
+      "desc": "Hey, Marvel Orleans here. 👋 I'm a highshooler in Indonesia with a passion in programming. I've been teaching myself to code for a over two years now, and I've built some side projects to show for it. So, if you've got a project you'd like to work on, feel free to contact me."
+    },
+    "projects": {
+      "title": "Projects Overview",
+      "portfolioWebsite": {
+        "title": "Simple Portfolio Site",
+        "desc": "A simple website to showcase my skills. Kickstarted my front-end journey."
+      },
+      "matrixVisualizerWebApp": {
+        "title": "2D Matrix Visualizer",
+        "desc": "A tool to help students learn matrices in linear algebra visually and interactively."
+      },
+      "imageReferencesApp": {
+        "title": "Croquis Desktop App",
+        "desc": "A reference-sketching tool used daily by a professional artist."
+      },
+      "seeMoreLink": "See More"
+    },
+    "skills": {
+      "title": "Technologies I've worked with",
+      "best": "I'm Best At",
+      "other": "Also Familiar With",
+      "tools": "Tools I Use"
+    },
+    "contact": {
+      "copyEmail": "Click to Copy My Email",
+      "visitGitHub": "Visit my GitHub Profile",
+      "resumeDownload": "Download my CV"
+    }
+  },
+  "projectsPage": {
+    "simplePortfolioSite": {
+      "title": "Simple Portfolio Site",
+      "desc": "Designed and actively maintaining a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and reinforcing core web development skills."
+    },
+    "matrixVisualizerWebApp": {
+      "title": "Matrix Visualizer Web-app",
+      "desc": "A self-initiated project to help visualize linear algebra transformations, built to deepen my understanding of matrix math. Open source on GitHub."
+    },
+    "imageReferencesDesktopApp": {
+      "title": "Croquis Image References Desktop App",
+      "desc": "Handled all aspects solo in building a reference-sketching tool for a professional artist (my brother). Evolved through regular feedback, for practicality and ease of use."
+    },
+    "githubAlt": "Github Link to This Project",
+    "websiteAlt": "Website Link to This Project",
+    "comingSoon": "Coming Soon!"
+  },
+  "iconsAlt": {
+    "python": "Python Programming Language",
+    "c": "C Programming Language",
+    "html": "HTML Language",
+    "css": "CSS Language",
+    "javascript": "JavaScript Programming Language",
+    "typescript": "TypeScript Programming Language",
+    "tailwindcss": "Tailwind CSS",
+    "nextjs": "NextJS Framework",
+    "reactjs": "React Library",
+    "git": "Git Version Control",
+    "github": "GitHub",
+    "email": "Email",
+    "document": "Document Icon"
+  },
+  "otherText": {
+    "presentDate": "PRESENT"
+  }
+}

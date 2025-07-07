@@ -1,9 +1,10 @@
 "use client";
 import Section, {
   BlankSectionProps as SectionProps,
-} from "@/components/layout/BlankSection";
+} from "@/components/BlankSection";
 import copyTextToClipboard from "@/util/copyTextToClipboard";
-import ThemeSensitiveImage from "@/components/layout/ThemeSensitiveImage";
+import ThemeSensitiveImage from "@/components/ThemeSensitiveImage";
+import { useTranslations } from "next-intl";
 
 /**
  * We use an interface here so it's easily customizable in the homepage
@@ -24,6 +25,8 @@ export default function Contact(props: ContactProps) {
     "w-full text-left text-[min(clamp(calc(0.45em+2vw),calc(0.6em+1vw),1em),_1.25em)] " +
     "max-[24rem]:text-sm max-[22rem]:text-[0.75em]";
   const imgClasses = "aspect-square w-8 max-[24rem]:w-6";
+  const contactText = useTranslations("homePage.contact");
+  const skillsAlts = useTranslations("iconsAlt");
   return (
     <Section
       id={props.id}
@@ -33,12 +36,13 @@ export default function Contact(props: ContactProps) {
       <button
         onClick={() => copyTextToClipboard(props.email)}
         className={buttonClasses + (props.email !== undefined ? "" : " hidden")}
+        title={contactText("copyEmail")}
       >
         <ThemeSensitiveImage
           className={imgClasses}
           lightImage="/src/general/icon-email-black.svg"
           darkImage="/src/general/icon-email-white.svg"
-          alt="Email icon"
+          alt={skillsAlts("email")}
         />
         <span className={spanClasses}>{props.email}</span>
       </button>
@@ -48,12 +52,13 @@ export default function Contact(props: ContactProps) {
         className={
           buttonClasses + (props.githubLink !== undefined ? "" : " hidden")
         }
+        title={contactText("visitGitHub")}
       >
         <ThemeSensitiveImage
           className={imgClasses}
           lightImage="/src/general/icon-github-black.svg"
           darkImage="/src/general/icon-github-white.svg"
-          alt="GitHub icon"
+          alt={skillsAlts("github")}
         />
         <span className={spanClasses}>{props.githubName}</span>
       </a>
@@ -68,9 +73,9 @@ export default function Contact(props: ContactProps) {
           className={imgClasses}
           lightImage="/src/general/icon-docs-black.svg"
           darkImage="/src/general/icon-docs-white.svg"
-          alt="Document icon"
+          alt={skillsAlts("document")}
         />
-        <span className={spanClasses}>Download my CV</span>
+        <span className={spanClasses}>{contactText("resumeDownload")}</span>
       </a>
     </Section>
   );

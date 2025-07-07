@@ -1,19 +1,22 @@
-import Navbar from "@/components/layout/Navbar";
-import Hero from "@/components/pages/home/Hero";
-import Intro from "@/components/pages/home/Intro";
-import Skills from "@/components/pages/home/Skills";
-import Projects from "@/components/pages/home/Projects";
-import About from "@/components/pages/home/About";
-import Contact from "@/components/pages/home/Contact";
-import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/Navbar";
+import Hero from "@/app/[locale]/homepage-sections/Hero";
+import Intro from "@/app/[locale]/homepage-sections/Intro";
+import Skills from "@/app/[locale]/homepage-sections/Skills";
+import Projects from "@/app/[locale]/homepage-sections/Projects";
+import About from "@/app/[locale]/homepage-sections/About";
+import Contact from "@/app/[locale]/homepage-sections/Contact";
+import Footer from "@/components/Footer";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const navbarText = useTranslations("navbar");
+
   return (
     <>
       <Navbar
         links={[
-          ["", "Home"],
-          ["./projects", "Projects"],
+          ["", navbarText("home")],
+          ["./projects", navbarText("projects")],
         ]}
         whichLink={0}
       />

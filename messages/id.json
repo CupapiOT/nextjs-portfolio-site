@@ -1,0 +1,95 @@
+{
+  "Metadata": {
+    "title": "Marvel Orleans",
+    "desc": "Situs Portofolio Marvel Orleans"
+  },
+  "navbar": {
+    "home": "Beranda",
+    "projects": "Proyek"
+  },
+  "localeSwitcher": {
+    "label": "Ganti Bahasa",
+    "localeNames": {
+      "en": "Inggris",
+      "id": "Indonesia",
+      "zh-Hans": "Tionghoa (Sederhana)",
+      "zh-Hant": "Tionghoa (Tradisional)",
+      "unknown": "Tidak Diketahui"
+    }
+  },
+  "homePage": {
+    "hero": {
+      "profileImgAlt": "Foto saya.",
+      "location": "Berasal dari Indonesia"
+    },
+    "intro": {
+      "text": "Murid & Pengembang"
+    },
+    "about": {
+      "title": "Siapakah Aku?",
+      "desc": "Hai, saya Marvel Orleans. 👋 Saya anak SMK di Indonesia yang suka programming. Setelah belajar sendiri lebih dari dua tahun, saya juga punya beberapa side project sebagai bukti. Kalau Anda punya proyek yang ingin dikerjakan bersama, jangan ragu menghubungi saya!"
+    },
+    "projects": {
+      "title": "Proyek Saya",
+      "portfolioWebsite": {
+        "title": "Situs Portofolio",
+        "desc": "Situs sederhana untuk menampilkan keterampilan saya. Ini awal perjalanan saya di bidang front-end."
+      },
+      "matrixVisualizerWebApp": {
+        "title": "Visualisasi Matriks",
+        "desc": "Alat untuk membantu pelajar memahami matriks dalam aljabar linier secara visual dan interaktif."
+      },
+      "imageReferencesApp": {
+        "title": "Aplikasi Desktop Croquis",
+        "desc": "Alat bantu sketsa referensi gambar; digunakan setiap hari oleh seorang ilustrator profesional."
+      },
+      "seeMoreLink": "Lihat Selengkapnya"
+    },
+    "skills": {
+      "title": "Teknologi yang Saya Gunakan",
+      "best": "Keahlian Utama Saya",
+      "other": "Saya Juga Berpengalaman Dengan",
+      "tools": "Alat-alat yang Saya Gunakan"
+    },
+    "contact": {
+      "copyEmail": "Klik untuk Menyalin Email",
+      "visitGitHub": "Kunjungi Profil GitHub Saya",
+      "resumeDownload": "Unduh CV Saya"
+    }
+  },
+  "projectsPage": {
+    "simplePortfolioSite": {
+      "title": "Situs Portofolio Sederhana",
+      "desc": "Merancang dan secara aktif memelihara situs portofolio pribadi menggunakan HTML, CSS, dan JavaScript standar. Berfokus pada kesederhanaan dan pengembangan keterampilan dasar pengembangan web."
+    },
+    "matrixVisualizerWebApp": {
+      "title": "Aplikasi Web Visualisasi Matriks",
+      "desc": "Proyek inisiatif pribadi untuk memvisualisasikan transformasi aljabar linier, dibuat untuk memperdalam pemahaman saya tentang matematika matriks. Proyek open source di GitHub."
+    },
+    "imageReferencesDesktopApp": {
+      "title": "Aplikasi Desktop Referensi Gambar Croquis",
+      "desc": "Menangani seluruh proses secara mandiri dalam membuat alat bantu sketsa referensi untuk seorang artis profesional (kakak saya). Berkembang melalui umpan balik rutin agar praktis dan mudah digunakan"
+    },
+    "githubAlt": "Tautan GitHub Proyek Ini",
+    "websiteAlt": "Tautan Website Proyek Ini",
+    "comingSoon": "Segera Hadir!"
+  },
+  "iconsAlt": {
+    "python": "Bahasa Pemrograman Python",
+    "c": "Bahasa Pemrograman C",
+    "html": "Bahasa HTML",
+    "css": "Bahasa CSS",
+    "javascript": "Bahasa Pemrograman JavaScript",
+    "typescript": "Bahasa Pemrograman TypeScript",
+    "tailwindcss": "Tailwind CSS",
+    "nextjs": "Framework NextJS",
+    "reactjs": "Library React",
+    "git": "Sistem Kontrol Versi Git",
+    "github": "GitHub",
+    "email": "Email",
+    "document": "Ikon Dokumen"
+  },
+  "otherText": {
+    "presentDate": "SEKARANG"
+  }
+}

@@ -6,6 +6,7 @@ interface ThemeSensitiveImageProps {
   lightImage: string;
   darkImage: string;
   alt: string;
+  ariaHidden?: boolean;
 }
 
 export default function ThemeSensitiveImage(props: ThemeSensitiveImageProps) {
@@ -18,6 +19,7 @@ export default function ThemeSensitiveImage(props: ThemeSensitiveImageProps) {
         title={props.alt}
         width={9999}
         height={9999}
+        aria-hidden={props.ariaHidden || false}
       />
     </picture>
   );

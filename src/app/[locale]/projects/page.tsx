@@ -1,23 +1,33 @@
-import Navbar from "@/components/layout/Navbar";
-import ProjectCard from "@/components/pages/projects/ProjectCard";
-import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/Navbar";
+import ProjectCard from "./ProjectCard";
+import Footer from "@/components/Footer";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const navbarText = useTranslations("navbar");
+  const presentDateText = useTranslations("otherText");
+  const portfolioSiteText = useTranslations("projectsPage.simplePortfolioSite");
+  const matrixVisualizerText = useTranslations(
+    "projectsPage.matrixVisualizerWebApp",
+  );
+  const imageReferencesText = useTranslations(
+    "projectsPage.imageReferencesDesktopApp",
+  );
   return (
     <>
       <Navbar
         links={[
-          ["../", "Home"],
-          ["./projects", "Projects"],
+          ["../", navbarText("home")],
+          ["./projects", navbarText("projects")],
         ]}
         whichLink={1}
       />
       <main className="pt-[6rem] text-lg max-w-full w-full flex flex-col items-center justify-center gap-y-16">
         <ProjectCard
-          id="simple-portfolio-site"
-          title="Simple Portfolio Site"
+          id="portfolio-site"
+          title={portfolioSiteText("title")}
           imgSrc="/src/projects/portfolio-site.webp"
-          desc="Designed and actively maintaining a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and reinforcing core web development skills."
+          desc={portfolioSiteText("desc")}
           gitHubLink="https://github.com/CupapiOT/CupapiOT.github.io"
           websiteLink="https://cupapiot.github.io"
           year={["2024", "2025"]}
@@ -25,18 +35,18 @@ export default function Home() {
         />
         <ProjectCard
           id="matrix-visualizer"
-          title="Matrix Visualizer Web-app"
+          title={matrixVisualizerText("title")}
           imgSrc="/src/projects/animated-matrices.webp"
-          desc="A self-initiated project to help visualize linear algebra transformations, built to deepen my understanding of matrix math. Open source on GitHub."
+          desc={matrixVisualizerText("desc")}
           gitHubLink="https://github.com/CupapiOT/animated-matrices"
-          year={["2024", "PRESENT"]}
+          year={["2024", presentDateText("presentDate")]}
           techUsed={["Python", "Python Dash", "Python Plotly"]}
         />
         <ProjectCard
           id="image-references"
-          title="Image References Desktop App"
+          title={imageReferencesText("title")}
           imgSrc="/src/projects/image-references.webp"
-          desc="Handled all aspects solo in building a reference-sketching tool for a professional artist (my brother). Evolved through regular feedback, for practicality and ease of use."
+          desc={imageReferencesText("desc")}
           gitHubLink="https://github.com/CupapiOT/croquis-image-references"
           year={["2023", "2024"]}
           techUsed={["Python", "CustomTkinter"]}

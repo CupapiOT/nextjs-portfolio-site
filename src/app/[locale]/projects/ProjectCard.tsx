@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import createTags from "@/components/layout/createTags";
+import createTags from "@/components/createTags";
 import { useRef, useEffect } from "react";
-import ThemeSensitiveImage from "@/components/layout/ThemeSensitiveImage";
+import ThemeSensitiveImage from "@/components/ThemeSensitiveImage";
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
   id?: string;
@@ -17,6 +18,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
+  // On-load and on-scroll-visible animations.
   const useIntersectionAnimation = (
     ref: React.RefObject<null>,
     className = "animate-slide-in-blur",
@@ -39,7 +41,6 @@ export default function ProjectCard(props: ProjectCardProps) {
       return () => observer.disconnect();
     }, [ref, className, threshold]);
   };
-
   const refImg = useRef(null);
   const refCard = useRef(null);
   const refGitHubLink = useRef(null);
@@ -49,6 +50,10 @@ export default function ProjectCard(props: ProjectCardProps) {
   useIntersectionAnimation(refGitHubLink);
   useIntersectionAnimation(refWebsiteLink);
 
+  // Constant for translations.
+  const projectCardText = useTranslations("projectsPage");
+
+  // Classes to avoid repetition in the code.
   const linkClasses =
     "animate-presets p-2 sm:p-4 rounded-xl bg-(--section-background) flex justify-center transition duration-300";
   const linkImageClasses = "max-w-[3em] aspect-auto";
@@ -110,28 +115,34 @@ export default function ProjectCard(props: ProjectCardProps) {
               className={`${linkClasses} hover:bg-(--contact-button-bg)`}
               href={props.gitHubLink}
               target="_blank"
-              title="GitHub link to this project"
+              title={projectCardText("githubAlt")}
             >
               <ThemeSensitiveImage
                 className={linkImageClasses}
                 lightImage="/src/general/icon-github-black.svg"
                 darkImage="/src/general/icon-github-white.svg"
-                alt="GitHub link to this project"
+                alt={projectCardText("githubAlt")}
               />
             </a>
           ) : (
             <p
               ref={refGitHubLink}
               className={`${linkClasses} gap-x-3 items-center text-neutral-400 italic`}
-              title="GitHub link to this project (Coming Soon!)"
+              title={
+                projectCardText("githubAlt") +
+                ` (${projectCardText("comingSoon")})`
+              }
             >
               <ThemeSensitiveImage
                 className={`${linkImageClasses} brightness-50`}
                 lightImage="/src/general/icon-github-black.svg"
                 darkImage="/src/general/icon-github-white.svg"
-                alt="GitHub link to this project (Coming Soon!)"
+                alt={
+                  projectCardText("githubAlt") +
+                  ` (${projectCardText("comingSoon")})`
+                }
               />
-              Coming Soon!
+              {projectCardText("comingSoon")}
             </p>
           )}
           {props.websiteLink !== undefined ? (
@@ -140,13 +151,13 @@ export default function ProjectCard(props: ProjectCardProps) {
               className={`${linkClasses} hover:bg-(--contact-button-bg)`}
               href={props.websiteLink}
               target="_blank"
-              title="Website link to this project"
+              title={projectCardText("websiteAlt")}
             >
               <ThemeSensitiveImage
                 className={linkImageClasses}
                 lightImage="/src/general/icon-link-black.svg"
                 darkImage="/src/general/icon-link-white.svg"
-                alt="Website link to this project"
+                alt={projectCardText("websiteAlt")}
               />
             </a>
           ) : (

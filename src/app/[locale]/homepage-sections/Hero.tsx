@@ -1,9 +1,11 @@
 import Section, {
   BlankSectionProps as SectionProps,
-} from "@/components/layout/BlankSection";
+} from "@/components/BlankSection";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Hero(props: SectionProps) {
+  const heroText = useTranslations("homePage.hero");
   return (
     <Section
       id={props.id}
@@ -16,12 +18,12 @@ export default function Hero(props: SectionProps) {
       <Image
         className="h-min aspect-video object-cover rounded-lg lg:h-full"
         src="/src/profile-photo.webp"
-        alt="A picture of me."
+        alt={heroText("profileImgAlt")}
         width={9999}
         height={9999}
       />
       <p className="text-sm font-mono text-center text-gray-700 dark:text-gray-300">
-        Based in Indonesia
+        {heroText("location")}
       </p>
     </Section>
   );

@@ -1,8 +1,9 @@
 import Section, {
   BlankSectionProps as SectionProps,
-} from "@/components/layout/BlankSection";
-import HorizontalLine from "@/components/layout/HorizontalLine";
-import createTags from "@/components/layout/createTags";
+} from "@/components/BlankSection";
+import HorizontalLine from "@/components/HorizontalLine";
+import createTags from "@/components/createTags";
+import { useTranslations } from "next-intl";
 
 interface ProjectItemProps {
   title: string;
@@ -50,41 +51,50 @@ interface ProjectsSectionProps extends SectionProps {
 }
 
 export default function Projects(props: ProjectsSectionProps) {
+  const projectsText = useTranslations("homePage.projects");
+  const presentDateText = useTranslations("otherText");
+  const portfolioWebsiteText = useTranslations(
+    "homePage.projects.portfolioWebsite",
+  );
+  const matrixVisualizerWebApp = useTranslations(
+    "homePage.projects.matrixVisualizerWebApp",
+  );
+  const imageReferencesApp = useTranslations(
+    "homePage.projects.imageReferencesApp",
+  );
+
   return (
     <Section
       id={props.id}
       className={`relative justify-start ${props.className || ""}`}
       fadeInDirection={props.fadeInDirection}
     >
-      <h2 className="section-header">Projects Overview</h2>
+      <h2 className="section-header">{projectsText("title")}</h2>
       <ul className="flex flex-col gap-y-2 mb-2 self-center w-full sm:max-w-9/10 lg:max-w-full">
         <ProjectItem
-          title="Portfolio Website"
+          title={portfolioWebsiteText("title")}
+          desc={portfolioWebsiteText("desc")}
           link="./projects"
-          desc="A simple website to showcase my skills. Kickstarted my front-end journey."
           year={["2024", "2025"]}
           techUsed={["HTML", "CSS", "JS"]}
         />
         <HorizontalLine width="full" className="my-2" />
         <ProjectItem
-          title="2D Matrix Visualizer"
-          link="./projects#matrix-visualizer"
-          desc="A tool to help students learn matrices in linear algebra visually and interactively."
-          year={["2024", "PRESENT"]}
+          title={matrixVisualizerWebApp("title")}
+          desc={matrixVisualizerWebApp("desc")}
+          link="./projects"
+          year={["2024", presentDateText("presentDate")]}
           techUsed={["Python", "Python Dash", "Python Plotly"]}
         />
         <HorizontalLine width="full" className="my-2" />
         <ProjectItem
-          title="Image References App"
-          link="./projects#image-references"
-          desc="A reference-sketching tool used daily by a professional artist."
+          title={imageReferencesApp("title")}
+          desc={imageReferencesApp("desc")}
+          link="./projects"
           techUsed={["Python", "CustomTkinter"]}
           year={["2023", "2024"]}
         />
         {props.pageLink !== undefined ? (
-          // The `min-[114rem]` media query ensures a smooth transition between
-          // the "See More" button's placements, specifically between 1024px
-          // and 1136px.
           <HorizontalLine
             width="full"
             className="mb-8 my-2 lg:mb-6 min-[114rem]:mb-[-5rem]"
@@ -97,7 +107,7 @@ export default function Projects(props: ProjectsSectionProps) {
             className="absolute bottom-5 hover:underline hover:text-cyan-500 hover:text-[1rem] translate duration-300"
             href={props.pageLink}
           >
-            See More ↗
+            {projectsText("seeMoreLink")}↗
           </a>
         ) : (
           ""
