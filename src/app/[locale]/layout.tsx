@@ -17,9 +17,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(
-  { params }: { params: Promise<{ locale: string }> },
-): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
 
   const t = await getTranslations({
@@ -28,8 +30,30 @@ export async function generateMetadata(
   });
 
   return {
+    metadataBase: new URL("https://marvel-orleans.vercel.app"),
+    alternates: {
+      canonical: "/",
+      languages: {
+        "en": "/en",
+        "id": "/id",
+        "zh-Hans": "/zh-Hans",
+        "zh-Hant": "/zh-Hant",
+      },
+    },
     title: t("title"),
     description: t("desc"),
+    authors: { name: "Marvel Orleans" },
+    openGraph: {
+      title: t("title"),
+      description: t("desc"),
+      siteName: t("title"),
+      url: "https://marvel-orleans.vercel.app",
+      images: "/src/projects/nextjs-portfolio-site.webp",
+    },
+    twitter: {
+      title: t("title"),
+      description: t("desc"),
+    },
   };
 }
 

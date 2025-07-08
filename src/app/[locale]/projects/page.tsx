@@ -7,7 +7,9 @@ export default function Home() {
   const navbarText = useTranslations("navbar");
   const presentDateText = useTranslations("otherText");
   const portfolioSiteText = useTranslations("projectsPage.simplePortfolioSite");
-  const nextjsPortfolioSiteText = useTranslations("projectsPage.nextjsPortfolioSite");
+  const nextjsPortfolioSiteText = useTranslations(
+    "projectsPage.nextjsPortfolioSite",
+  );
   const matrixVisualizerText = useTranslations(
     "projectsPage.matrixVisualizerWebApp",
   );
