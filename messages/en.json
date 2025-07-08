@@ -26,7 +26,7 @@
       "text": "Student & Developer"
     },
     "about": {
-      "title": "Who am I?",
+      "title": "Who Am I?",
       "desc": "Hey, Marvel Orleans here. 👋 I'm a highshooler in Indonesia with a passion in programming. I've been teaching myself to code for a over two years now, and I've built some side projects to show for it. So, if you've got a project you'd like to work on, feel free to contact me."
     },
     "projects": {
@@ -46,7 +46,7 @@
       "seeMoreLink": "See More"
     },
     "skills": {
-      "title": "Technologies I've worked with",
+      "title": "Technologies I've Worked With",
       "best": "I'm Best At",
       "other": "Also Familiar With",
       "tools": "Tools I Use"
@@ -60,7 +60,7 @@
   "projectsPage": {
     "nextjsPortfolioSite": {
       "title": "NextJS Portfolio Site",
-      "desc": "A polished, evolving portfolio site built from scratch—now with light/dark mode and support for three languages, including both Chinese scripts."
+      "desc": "A polished, evolving portfolio site built from scratch—now with light/dark mode and support for three languages, including both Chinese scripts. Design inspired by Tim Gatzke (tim-gatzke.de), rebuilt and iterated upon."
     },
     "simplePortfolioSite": {
       "title": "Simple Portfolio Site",
