@@ -12,14 +12,17 @@ It's open source &mdash; feel free to use it as a reference for your own website
 - A fully responsive design.
 - Two pages, one home and one projects.
 - A short and sweet user experience for desktop users (no scrolling needed for
-  the homepage!)
-- In terms of code, it's very modular and easy to customize.
+  the homepage on 1920x1080 screens!).
+- In terms of code, it's modular and easy to customize.
+- A light and dark mode for both ends of the user spectrum.
+- Multilingual support (3 languages: English, Indonesian, and both Chinese scripts for Mandarin Chinese).
 
 ### Built With
 
 - [![Next][Next.js]][Next-url]
 - [![React][React.js]][React-url]
 - [![Tailwind][TailwindCSS]][Tailwind-url]
+- [![NextIntl][next-intl]][next-intl-url]
 
 ## Getting started
 
@@ -27,7 +30,7 @@ To use or explore the code of this site:
 
 - Fork the repository.
 - Clone your fork locally.
-- Run the development server:
+- Run the development server in the root folder:
 
 ```bash
 npm run dev
@@ -53,3 +56,5 @@ This project is licensed under the Apache 2.0 License &mdash; see the [LICENSE](
 [React-url]: https://reactjs.org/cknowledgments
 [TailwindCSS]: https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss
 [Tailwind-url]: https://tailwindcss.com/
+[next-intl]: https://img.shields.io/badge/NextIntl_--_Internationalization-blue
+[next-intl-url]: https://next-intl.dev/
