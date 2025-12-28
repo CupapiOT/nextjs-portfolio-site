@@ -11,7 +11,7 @@ interface ProjectCardProps {
   title: string;
   imgSrc: string;
   desc: string;
-  techUsed: string[];
+  tags: string[];
   gitHubLink?: string;
   websiteLink?: string;
   year?: string[];
@@ -30,7 +30,8 @@ export default function ProjectCard(props: ProjectCardProps) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            entry.target.classList.toggle(className, entry.isIntersecting);
+            if (entry.isIntersecting)
+              entry.target.classList.add(className);
           });
         },
         { threshold },
@@ -103,7 +104,7 @@ export default function ProjectCard(props: ProjectCardProps) {
             {props.desc}
           </p>
           <ul className="flex flex-wrap gap-x-2">
-            {createTags(props.techUsed)}
+            {createTags(props.tags)}
           </ul>
         </div>
         <div

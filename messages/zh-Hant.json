@@ -27,20 +27,20 @@
     },
     "about": {
       "title": "我是誰？",
-      "desc": "你好，我是 Marvel Orleans。👋 我是來自印度尼西亞的一名高中生，對編程充滿熱情。我已經自學編程兩年多了，並獨立完成了一些小項目作為成果展示。除此之外，我也學中文學了五個多月，希望以後能用中文和更多人交流。如果你有感興趣的項目，歡迎隨時聯繫我。"
+      "desc": "你好，我是 Marvel Orleans。👋 我是來自印度尼西亞的一名高中生，對編程充滿熱情。我已經自學編程兩年多了，並獨立完成了一些小項目作為成果展示。除此之外，我也學中文學了 12 個多月了，希望以後能用中文和更多人交流。如果你有感興趣的項目，歡迎隨時聯繫我。"
     },
     "projects": {
       "title": "項目概覽",
-      "nextjsPortfolioWebsite": {
+      "nextjsPortfolioSite": {
         "title": "NextJS 作品集網站",
         "desc": "響應式且支持多語言，使用現代技術構建——配有淺色和深色主題。"
       },
-      "matrixVisualizerWebApp": {
-        "title": "二維矩陣可視化工具",
+      "animatedMatrices": {
+        "title": "Animated Matrices",
         "desc": "幫助學生通過可視化和交互方式學習線性代數中的矩陣概念。"
       },
-      "imageReferencesApp": {
-        "title": "Croquis 桌面應用",
+      "croquisImageReferences": {
+        "title": "Image References",
         "desc": "一款專業畫師每天使用的參考圖繪畫工具。"
       },
       "seeMoreLink": "查看更多"
@@ -66,12 +66,12 @@
       "title": "簡單的個人作品集網站",
       "desc": "使用標準的 HTML、CSS 和 JS 設計了個人作品網站——專注於簡潔性和學習核心的網頁開發技能。"
     },
-    "matrixVisualizerWebApp": {
-      "title": "矩陣可視化 Web 應用",
+    "animatedMatrices": {
+      "title": "Animated Matrices",
       "desc": "一個自發啟動的項目，旨在幫助可視化線性代數中的變換，加深我對矩陣數學的理解。已開源並託管在 GitHub 上。"
     },
-    "imageReferencesDesktopApp": {
-      "title": "Croquis 圖像參考桌面應用",
+    "croquisImageReferences": {
+      "title": "Croquis Image References",
       "desc": "獨立完成的參考圖繪畫工具，為我哥哥（專業畫師）開發。該工具在反覆的反饋中不斷完善，更加實用且易於使用。"
     },
     "githubAlt": "該項目的 GitHub 鏈接",

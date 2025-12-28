@@ -31,16 +31,16 @@
     },
     "projects": {
       "title": "Proyek Saya",
-      "nextjsPortfolioWebsite": {
+      "nextjsPortfolioSite": {
         "title": "Situs Portofolio NextJS",
-        "desc": "Responsif dan multibahasa, dibuat dengan alat modern—lengkap dengan tema terang dan gelap."
+        "desc": "Responsif dan multibahasa, dibuat dengan alat modern. Lengkap dengan tema terang dan gelap."
       },
-      "matrixVisualizerWebApp": {
-        "title": "Visualisasi Matriks",
+      "animatedMatrices": {
+        "title": "Animated Matrices",
         "desc": "Alat untuk membantu pelajar memahami matriks dalam aljabar linier secara visual dan interaktif."
       },
-      "imageReferencesApp": {
-        "title": "Aplikasi Desktop Croquis",
+      "croquisImageReferences": {
+        "title": "Image References",
         "desc": "Alat bantu sketsa referensi gambar; digunakan setiap hari oleh seorang ilustrator profesional."
       },
       "seeMoreLink": "Lihat Selengkapnya"
@@ -66,12 +66,12 @@
       "title": "Situs Portofolio Sederhana",
       "desc": "Merancang situs portofolio pribadi menggunakan HTML, CSS, dan JavaScript standar. Berfokus pada kesederhanaan dan pengembangan keterampilan dasar pengembangan web."
     },
-    "matrixVisualizerWebApp": {
-      "title": "Aplikasi Web Visualisasi Matriks",
+    "animatedMatrices": {
+      "title": "Animated Matrices",
       "desc": "Proyek inisiatif pribadi untuk memvisualisasikan transformasi aljabar linier, dibuat untuk memperdalam pemahaman saya tentang matematika matriks. Proyek open source di GitHub."
     },
-    "imageReferencesDesktopApp": {
-      "title": "Aplikasi Desktop Referensi Gambar Croquis",
+    "croquisImageReferences": {
+      "title": "Croquis Image References",
       "desc": "Menangani seluruh proses secara mandiri dalam membuat alat bantu sketsa referensi untuk seorang artis profesional (kakak saya). Berkembang melalui umpan balik rutin agar praktis dan mudah digunakan"
     },
     "githubAlt": "Tautan GitHub Proyek Ini",

@@ -31,15 +31,15 @@
     },
     "projects": {
       "title": "Projects Overview",
-      "nextjsPortfolioWebsite": {
+      "nextjsPortfolioSite": {
         "title": "NextJS Portfolio Site",
-        "desc": "Responsive and multilingual, built with modern tech—complete with light and dark themes."
+        "desc": "Responsive and multilingual, built with modern tech. Complete with light and dark themes."
       },
-      "matrixVisualizerWebApp": {
-        "title": "2D Matrix Visualizer",
+      "animatedMatrices": {
+        "title": "Animated Matrices",
         "desc": "A tool to help students learn matrices in linear algebra visually and interactively."
       },
-      "imageReferencesApp": {
+      "croquisImageReferences": {
         "title": "Croquis Desktop App",
         "desc": "A reference-sketching tool used daily by a professional artist."
       },
@@ -66,11 +66,11 @@
       "title": "Simple Portfolio Site",
       "desc": "Designed a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and learning core web development skills."
     },
-    "matrixVisualizerWebApp": {
+    "animatedMatrices": {
       "title": "Matrix Visualizer Web-app",
       "desc": "A self-initiated project to help visualize linear algebra transformations, built to deepen my understanding of matrix math. Open source on GitHub."
     },
-    "imageReferencesDesktopApp": {
+    "croquisImageReferences": {
       "title": "Croquis Image References Desktop App",
       "desc": "Handled all aspects solo in building a reference-sketching tool for a professional artist (my brother). Evolved through regular feedback, for practicality and ease of use."
     },
