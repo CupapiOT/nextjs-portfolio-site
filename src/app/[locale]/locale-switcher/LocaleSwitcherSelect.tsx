@@ -27,7 +27,7 @@ export default function LocaleSwitcherSelect({
     const nextLocale = event.target.value as Locale;
     const newPath = "/" + nextLocale + endingPath;
     startTransition(() => {
-      router.replace(newPath);
+      router.replace(newPath, { scroll: false });
     });
   }
 
