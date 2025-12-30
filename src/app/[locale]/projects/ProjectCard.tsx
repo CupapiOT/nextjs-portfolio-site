@@ -4,6 +4,7 @@ import createTags from "@/components/createTags";
 import { useRef, useEffect } from "react";
 import ThemeSensitiveImage from "@/components/ThemeSensitiveImage";
 import { useTranslations } from "next-intl";
+import clsx from "clsx";
 
 interface ProjectCardProps {
   id?: string;
@@ -12,7 +13,7 @@ interface ProjectCardProps {
   imgSrc: string;
   desc: string;
   tags: string[];
-  gitHubLink?: string;
+  gitHubLink?: string | "COMING_SOON";
   websiteLink?: string;
   year?: string[];
 }
@@ -30,8 +31,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting)
-              entry.target.classList.add(className);
+            if (entry.isIntersecting) entry.target.classList.add(className);
           });
         },
         { threshold },
@@ -103,29 +103,17 @@ export default function ProjectCard(props: ProjectCardProps) {
           <p className="text-justify text-gray-700 dark:text-gray-300">
             {props.desc}
           </p>
-          <ul className="flex flex-wrap gap-x-2">
-            {createTags(props.tags)}
-          </ul>
+          <ul className="flex flex-wrap gap-x-2">{createTags(props.tags)}</ul>
         </div>
         <div
-          className={`grid gap-x-4 ${props.websiteLink !== undefined ? "grid-cols-2" : ""}`}
+          className={clsx(
+            "grid gap-x-4",
+            props.websiteLink !== undefined &&
+              props.gitHubLink !== undefined &&
+              "grid-cols-2",
+          )}
         >
-          {props.gitHubLink !== undefined ? (
-            <a
-              ref={refGitHubLink}
-              className={`${linkClasses} hover:bg-(--contact-button-bg)`}
-              href={props.gitHubLink}
-              target="_blank"
-              title={projectCardText("githubAlt")}
-            >
-              <ThemeSensitiveImage
-                className={linkImageClasses}
-                lightImage="/src/general/icon-github-black.svg"
-                darkImage="/src/general/icon-github-white.svg"
-                alt={projectCardText("githubAlt")}
-              />
-            </a>
-          ) : (
+          {props.gitHubLink === "COMING_SOON" ? (
             <p
               ref={refGitHubLink}
               className={`${linkClasses} gap-x-3 items-center text-neutral-400 italic`}
@@ -145,6 +133,23 @@ export default function ProjectCard(props: ProjectCardProps) {
               />
               {projectCardText("comingSoon")}
             </p>
+          ) : (
+            props.gitHubLink !== undefined && (
+              <a
+                ref={refGitHubLink}
+                className={`${linkClasses} hover:bg-(--contact-button-bg)`}
+                href={props.gitHubLink}
+                target="_blank"
+                title={projectCardText("githubAlt")}
+              >
+                <ThemeSensitiveImage
+                  className={linkImageClasses}
+                  lightImage="/src/general/icon-github-black.svg"
+                  darkImage="/src/general/icon-github-white.svg"
+                  alt={projectCardText("githubAlt")}
+                />
+              </a>
+            )
           )}
           {props.websiteLink !== undefined ? (
             <a

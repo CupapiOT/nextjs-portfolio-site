@@ -27,13 +27,13 @@
     },
     "about": {
       "title": "我是谁？",
-      "desc": "你好，我是 Marvel Orleans。👋 我是来自印度尼西亚的一名高中生，对编程充满热情。我已经自学编程两年多了，并独立完成了一些小项目作为成果展示。除此之外，我也学中文学了 12 个多月了，希望以后能用中文和更多人交流。如果你有感兴趣的项目，欢迎随时联系我。"
+      "desc": "你好，我是 Marvel Orleans。👋 我是来自印度尼西亚的一名高中生，对编程充满热情。我已经自学编程 2.5 年多了，并独立完成了一些小项目作为成果展示。除此之外，我也学中文学了 12 个多月了，希望以后能用中文和更多人交流。如果你有感兴趣的项目，欢迎随时联系我。"
     },
     "projects": {
       "title": "项目概览",
       "nextjsPortfolioSite": {
         "title": "NextJS 作品集网站",
-        "desc": "响应式且支持多语言，使用现代技术构建——配有浅色和深色主题。"
+        "desc": "响应式且支持多语言，使用现代技术构建。配有浅色和深色主题。"
       },
       "animatedMatrices": {
         "title": "Animated Matrices",
@@ -58,9 +58,13 @@
     }
   },
   "projectsPage": {
+    "seaPortfolioSite": {
+      "title": "Sea 作品集网站",
+      "desc": "创建了一个完全响应式的作品集网站，在设计和开发的每个阶段都与客户紧密合作。交付了一个精致的最终产品，满足所有需求，包括两次客户修改，并可在各种设备和浏览器上正常运行。"
+    },
     "nextjsPortfolioSite": {
       "title": "NextJS 作品集网站",
-      "desc": "一个由我独立开发并持续完善的作品集网站——支持浅色和深色模式，同时提供三种语言，其中中文包含简体和繁体两种书写方式。设计灵感来自 Tim Gatzke（tim-gatzke.de），在此基础上重建并不断优化。"
+      "desc": "一个由我独立开发并持续完善的作品集网站。支持浅色和深色模式，同时提供三种语言，其中中文包含简体和繁体两种书写方式。设计灵感来自 Tim Gatzke（tim-gatzke.de），在此基础上重建并不断优化。"
     },
     "simplePortfolioSite": {
       "title": "简单的个人作品集网站",
@@ -76,7 +80,9 @@
     },
     "githubAlt": "该项目的 GitHub 链接",
     "websiteAlt": "该项目的网站链接",
-    "comingSoon": "即将上线！"
+    "comingSoon": "即将上线！",
+    "personalTabButton": "个人",
+    "commercialTabButton": "商业"
   },
   "iconsAlt": {
     "python": "Python 编程语言",

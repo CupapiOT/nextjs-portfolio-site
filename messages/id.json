@@ -27,7 +27,7 @@
     },
     "about": {
       "title": "Siapakah Aku?",
-      "desc": "Hai, saya Marvel Orleans 👋, anak SMK di Indonesia yang suka programming. Setelah belajar sendiri lebih dari dua tahun, saya juga punya beberapa side project sebagai bukti. Kalau Anda punya proyek yang ingin dikerjakan bersama, jangan ragu menghubungi saya!"
+      "desc": "Hai, saya Marvel Orleans 👋, anak SMK di Indonesia yang suka programming. Setelah belajar sendiri lebih dari 2.5 tahun, saya juga punya beberapa side project sebagai bukti. Kalau Anda punya proyek yang ingin dikerjakan bersama, jangan ragu menghubungi saya!"
     },
     "projects": {
       "title": "Proyek Saya",
@@ -58,6 +58,10 @@
     }
   },
   "projectsPage": {
+    "seaPortfolioSite": {
+      "title": "Situs Portofolio Sea",
+      "desc": "Membuat situs portofolio responsif, berkolaborasi erat dengan klien di seluruh tahap desain dan pengembangan. Menyelesaikan produk akhir yang rapi, sesuai kebutuhan, dengan dua revisi klien, dan kompatibel di semua perangkat dan browser."
+    },
     "nextjsPortfolioSite": {
       "title": "Situs Portofolio NextJS",
       "desc": "Situs portofolio kaya-fitur yang saya bangun dari nol dan terus saya kembangkan dengan teknologi lebih modern—mendukung mode terang/gelap serta tiga bahasa, termasuk dua versi aksara untuk bahasa Mandarin. Desain terinspirasi dari Tim Gatzke (tim-gatzke.de), kemudian dibangun ulang dan disempurnakan."
@@ -76,7 +80,10 @@
     },
     "githubAlt": "Tautan GitHub Proyek Ini",
     "websiteAlt": "Tautan Website Proyek Ini",
-    "comingSoon": "Segera Hadir!"
+    "comingSoon": "Segera Hadir!",
+    "personalTabButton": "Pribadi",
+    "commercialTabButton": "Komersil"
+
   },
   "iconsAlt": {
     "python": "Bahasa Pemrograman Python",
