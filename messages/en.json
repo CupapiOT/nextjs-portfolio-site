@@ -52,9 +52,9 @@
       "tools": "Tools I Use"
     },
     "contact": {
-      "copyEmail": "Click to Copy My Email",
-      "visitGitHub": "Visit my GitHub Profile",
-      "resumeDownload": "Download my CV"
+      "copyEmail": "Click to copy my email",
+      "visitGitHub": "Visit my GitHub profile",
+      "resumeDownload": "Download my resume"
     }
   },
   "projectsPage": {
@@ -71,11 +71,11 @@
       "desc": "Designed a personal portfolio site using standard HTML, CSS, and JS—focused on simplicity and learning core web development skills."
     },
     "animatedMatrices": {
-      "title": "Matrix Visualizer Web-app",
+      "title": "Animated Matrices",
       "desc": "A self-initiated project to help visualize linear algebra transformations, built to deepen my understanding of matrix math. Open source on GitHub."
     },
     "croquisImageReferences": {
-      "title": "Croquis Image References Desktop App",
+      "title": "Croquis Image References",
       "desc": "Handled all aspects solo in building a reference-sketching tool for a professional artist (my brother). Evolved through regular feedback, for practicality and ease of use."
     },
     "githubAlt": "Github Link to This Project",
