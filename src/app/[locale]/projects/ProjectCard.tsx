@@ -18,7 +18,17 @@ interface ProjectCardProps {
   year?: string[];
 }
 
-export default function ProjectCard(props: ProjectCardProps) {
+export default function ProjectCard({
+  id,
+  className,
+  title,
+  imgSrc,
+  desc,
+  tags,
+  gitHubLink,
+  websiteLink,
+  year,
+}: ProjectCardProps) {
   // On-load and on-scroll-visible animations.
   const useIntersectionAnimation = (
     ref: React.RefObject<null>,
@@ -61,16 +71,18 @@ export default function ProjectCard(props: ProjectCardProps) {
 
   return (
     <article
-      id={props.id}
-      className={`responsive-width lg:!max-w-9/10 xl:!max-w-4/5 2xl:!max-w-3/5 rounded-xl flex flex-col lg:flex-row gap-4 last:mb-16 
-        ${props.className || ""}`}
+      id={id}
+      className={clsx(
+        "responsive-width lg:!max-w-9/10 xl:!max-w-4/5 2xl:!max-w-3/5 rounded-xl flex flex-col lg:flex-row gap-4 last:mb-16",
+        className || "",
+      )}
     >
       <h2 className="font-bold text-3xl flex flex-col gap-y-1 lg:hidden">
-        {props.title}
-        {props.year !== undefined ? (
+        {title}
+        {year !== undefined ? (
           <p className="project-year-text">
-            ({props.year[0]}
-            {props.year[1] !== undefined ? "–" + props.year[1] : ""})
+            ({year[0]}
+            {year[1] !== undefined ? "–" + year[1] : ""})
           </p>
         ) : (
           ""
@@ -79,8 +91,8 @@ export default function ProjectCard(props: ProjectCardProps) {
       <Image
         ref={refImg}
         className="animate-presets w-full aspect-auto object-cover rounded-xl lg:aspect-video lg:w-[min(30rem,40%)]"
-        src={props.imgSrc}
-        alt={props.title}
+        src={imgSrc}
+        alt={title}
         width={9999}
         height={9999}
       />
@@ -90,40 +102,43 @@ export default function ProjectCard(props: ProjectCardProps) {
           className="animate-presets -translate-y-1/5 lg:delay-150 blur-xs flex flex-col p-4 rounded-xl bg-(--section-background) gap-y-3"
         >
           <h2 className="hidden font-bold text-3xl flex-col gap-y-1 lg:block">
-            {props.title}
-            {props.year !== undefined ? (
+            {title}
+            {year !== undefined ? (
               <p className="project-year-text">
-                ({props.year[0]}
-                {props.year[1] !== undefined ? "–" + props.year[1] : ""})
+                ({year[0]}
+                {year[1] !== undefined ? "–" + year[1] : ""})
               </p>
             ) : (
               ""
             )}
           </h2>
           <p className="text-justify text-gray-700 dark:text-gray-300">
-            {props.desc}
+            {desc}
           </p>
-          <ul className="flex flex-wrap gap-x-2">{createTags(props.tags)}</ul>
+          <ul className="flex flex-wrap gap-x-2">{createTags(tags)}</ul>
         </div>
         <div
           className={clsx(
             "grid gap-x-4",
-            props.websiteLink !== undefined &&
-              props.gitHubLink !== undefined &&
+            websiteLink !== undefined &&
+              gitHubLink !== undefined &&
               "grid-cols-2",
           )}
         >
-          {props.gitHubLink === "COMING_SOON" ? (
+          {gitHubLink === "COMING_SOON" ? (
             <p
               ref={refGitHubLink}
-              className={`${linkClasses} gap-x-3 items-center text-neutral-400 italic`}
+              className={clsx(
+                linkClasses,
+                "gap-x-3 items-center text-neutral-400 italic",
+              )}
               title={
                 projectCardText("githubAlt") +
                 ` (${projectCardText("comingSoon")})`
               }
             >
               <ThemeSensitiveImage
-                className={`${linkImageClasses} brightness-50`}
+                className={clsx(linkImageClasses, "brightness-50")}
                 lightImage="/src/general/icon-github-black.svg"
                 darkImage="/src/general/icon-github-white.svg"
                 alt={
@@ -134,11 +149,11 @@ export default function ProjectCard(props: ProjectCardProps) {
               {projectCardText("comingSoon")}
             </p>
           ) : (
-            props.gitHubLink !== undefined && (
+            gitHubLink !== undefined && (
               <a
                 ref={refGitHubLink}
-                className={`${linkClasses} hover:bg-(--contact-button-bg)`}
-                href={props.gitHubLink}
+                className={clsx(linkClasses, "hover:bg-(--contact-button-bg)")}
+                href={gitHubLink}
                 target="_blank"
                 title={projectCardText("githubAlt")}
               >
@@ -151,11 +166,11 @@ export default function ProjectCard(props: ProjectCardProps) {
               </a>
             )
           )}
-          {props.websiteLink !== undefined ? (
+          {websiteLink !== undefined ? (
             <a
               ref={refWebsiteLink}
-              className={`${linkClasses} hover:bg-(--contact-button-bg)`}
-              href={props.websiteLink}
+              className={clsx(linkClasses, "hover:bg-(--contact-button-bg)")}
+              href={websiteLink}
               target="_blank"
               title={projectCardText("websiteAlt")}
             >

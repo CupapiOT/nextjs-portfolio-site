@@ -1,33 +1,30 @@
 "use client";
-
-import React from "react";
 import { useEffect, useRef } from "react";
+import clsx from "clsx";
+
+type FadeInDirection = "UP" | "DOWN" | "LEFT" | "RIGHT" | "NONE";
 
 export interface BlankSectionProps {
   className?: string;
   id?: string;
   children?: React.ReactNode;
-  fadeInDirection?:
-    | "up"
-    | "UP"
-    | "down"
-    | "DOWN"
-    | "left"
-    | "LEFT"
-    | "right"
-    | "RIGHT"
-    | "none"
-    | "NONE";
+  fadeInDirection?: FadeInDirection;
 }
 
-export default function BlankSection(props: BlankSectionProps) {
+export default function BlankSection({
+  className,
+  id,
+  children,
+  fadeInDirection = "NONE",
+}: BlankSectionProps) {
   // This code before the return statement just handles animations.
   const ref = useRef(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          entry.target.classList.add("animate-slide-in-blur");
+          if (entry.isIntersecting)
+            entry.target.classList.add("animate-slide-in-blur");
         });
       },
       { threshold: 0 },
@@ -36,39 +33,25 @@ export default function BlankSection(props: BlankSectionProps) {
     return () => observer.disconnect();
   }, []);
 
-  let whichDirection: string;
-  switch (props.fadeInDirection) {
-    case "up":
-    case "UP":
-      whichDirection = "-translate-y-1/3";
-      break;
-    case "down":
-    case "DOWN":
-      whichDirection = "translate-y-1/3";
-      break;
-    case "right":
-    case "RIGHT":
-      whichDirection = "-translate-x-1/3";
-      break;
-    case "left":
-    case "LEFT":
-      whichDirection = "translate-x-1/3";
-      break;
-    case "none":
-    case "NONE":
-    default:
-      whichDirection = "";
-      break;
-  }
+  const whichDirection: Record<FadeInDirection, string> = {
+    UP: "-translate-y-1/3",
+    DOWN: "translate-y-1/3",
+    RIGHT: "-translate-x-1/3",
+    LEFT: "translate-x-1/3",
+    NONE: "",
+  };
 
   return (
     <section
-      id={props.id}
+      id={id}
       ref={ref}
-      className={`animate-presets blur-xs ${whichDirection} w-95/100 responsive-width flex flex-col bg-(--section-background) justify-center rounded-xl p-5 
-        ${props.className || ""}`}
+      className={clsx(
+        "animate-presets blur-xs w-95/100 responsive-width flex flex-col bg-(--section-background) justify-center rounded-xl p-5",
+        whichDirection[fadeInDirection],
+        className || "",
+      )}
     >
-      {props.children}
+      {children}
     </section>
   );
 }

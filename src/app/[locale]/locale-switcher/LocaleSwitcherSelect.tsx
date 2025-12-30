@@ -10,7 +10,11 @@ interface LocaleSwitcherSelectProps {
   label: string;
 }
 
-export default function LocaleSwitcherSelect(props: LocaleSwitcherSelectProps) {
+export default function LocaleSwitcherSelect({
+  children,
+  defaultValue,
+  label,
+}: LocaleSwitcherSelectProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
@@ -36,16 +40,16 @@ export default function LocaleSwitcherSelect(props: LocaleSwitcherSelectProps) {
           (isPending ? " transition-opacity [&:disabled]opacity-30" : "")
         }
       >
-        <p className="sr-only">{props.label}</p>
+        <p className="sr-only">{label}</p>
         <select
           className="transition-[color] duration-100 text-gray-500 bg-transparent hover:text-gray-600 dark:hover:text-gray-400 focus:text-gray-700 focus:bg-[#ffffff] focus:dark:text-gray-300 focus:dark:bg-[#222222] rounded-lg border-none cursor-pointer"
           name="locale-switcher-select"
           id="locale-switcher-select"
-          defaultValue={props.defaultValue}
+          defaultValue={defaultValue}
           disabled={isPending}
           onChange={changeLocale}
         >
-          {props.children}
+          {children}
         </select>
       </label>
     </>

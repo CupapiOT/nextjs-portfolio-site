@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import LocaleSwitcher from "./locale-switcher/LocaleSwitcher";
+import clsx from "clsx";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -34,8 +35,8 @@ export async function generateMetadata({
     alternates: {
       canonical: "/",
       languages: {
-        "en": "/en",
-        "id": "/id",
+        en: "/en",
+        id: "/id",
         "zh-Hans": "/zh-Hans",
         "zh-Hant": "/zh-Hant",
       },
@@ -80,7 +81,11 @@ export default async function LocaleLayout({
   return (
     <html className="scroll-smooth" lang={locale}>
       <body
-        className={`relative flex justify-center ${interSans.className} ${geistMono.variable} antialiased`}
+        className={clsx(
+          "relative flex justify-center antialiased",
+          interSans.className,
+          geistMono.variable,
+        )}
       >
         <NextIntlClientProvider>
           <LocaleSwitcher />

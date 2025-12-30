@@ -3,14 +3,15 @@ import Section, {
 } from "@/components/BlankSection";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import clsx from "clsx";
 
-export default function Hero(props: SectionProps) {
+export default function Hero({ id, className, fadeInDirection }: SectionProps) {
   const heroText = useTranslations("homePage.hero");
   return (
     <Section
-      id={props.id}
-      className={`py-3 aspect-auto gap-y-2 ${props.className || ""}`}
-      fadeInDirection={props.fadeInDirection}
+      id={id}
+      className={clsx("py-3 aspect-auto gap-y-2", className || "")}
+      fadeInDirection={fadeInDirection}
     >
       <h1 className="text-4xl text-center font-bold text-cyan-600">
         Marvel Orleans

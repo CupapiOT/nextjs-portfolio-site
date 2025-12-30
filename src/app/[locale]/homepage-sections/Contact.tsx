@@ -2,6 +2,7 @@
 import Section, {
   BlankSectionProps as SectionProps,
 } from "@/components/BlankSection";
+import clsx from "clsx";
 import copyTextToClipboard from "@/util/copyTextToClipboard";
 import ThemeSensitiveImage from "@/components/ThemeSensitiveImage";
 import { useTranslations } from "next-intl";
@@ -17,7 +18,15 @@ interface ContactProps extends SectionProps {
   resumeSrc?: string;
 }
 
-export default function Contact(props: ContactProps) {
+export default function Contact({
+  id,
+  className,
+  fadeInDirection,
+  email,
+  githubName,
+  githubLink,
+  resumeSrc,
+}: ContactProps) {
   const buttonClasses =
     "w-full sm:max-w-4/5 lg:max-w-full lg:h-full grid grid-cols-[2em_1fr] items-center p-2 px-5 gap-x-4 rounded-xl cursor-pointer " +
     "bg-(--contact-button-bg) hover:bg-(--contact-button-hover) transform duration-300 hover:scale-[101%] hover:shadow-md dark:hover:shadow-lg";
@@ -29,13 +38,13 @@ export default function Contact(props: ContactProps) {
   const skillsAlts = useTranslations("iconsAlt");
   return (
     <Section
-      id={props.id}
-      className={`items-center gap-y-2 ${props.className || ""}`}
-      fadeInDirection={props.fadeInDirection}
+      id={id}
+      className={clsx("items-center gap-y-2", className || "")}
+      fadeInDirection={fadeInDirection}
     >
       <button
-        onClick={() => copyTextToClipboard(props.email)}
-        className={buttonClasses + (props.email !== undefined ? "" : " hidden")}
+        onClick={() => copyTextToClipboard(email)}
+        className={buttonClasses + (email !== undefined ? "" : " hidden")}
         title={contactText("copyEmail")}
       >
         <ThemeSensitiveImage
@@ -44,14 +53,12 @@ export default function Contact(props: ContactProps) {
           darkImage="/src/general/icon-email-white.svg"
           alt={skillsAlts("email")}
         />
-        <span className={spanClasses}>{props.email}</span>
+        <span className={spanClasses}>{email}</span>
       </button>
       <a
-        href={props.githubLink}
+        href={githubLink}
         target="_blank"
-        className={
-          buttonClasses + (props.githubLink !== undefined ? "" : " hidden")
-        }
+        className={buttonClasses + (githubLink !== undefined ? "" : " hidden")}
         title={contactText("visitGitHub")}
       >
         <ThemeSensitiveImage
@@ -60,14 +67,12 @@ export default function Contact(props: ContactProps) {
           darkImage="/src/general/icon-github-white.svg"
           alt={skillsAlts("github")}
         />
-        <span className={spanClasses}>{props.githubName}</span>
+        <span className={spanClasses}>{githubName}</span>
       </a>
       <a
-        href={props.resumeSrc}
+        href={resumeSrc}
         target="_blank"
-        className={
-          buttonClasses + (props.resumeSrc !== undefined ? "" : " hidden")
-        }
+        className={buttonClasses + (resumeSrc !== undefined ? "" : " hidden")}
       >
         <ThemeSensitiveImage
           className={imgClasses}

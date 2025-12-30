@@ -9,17 +9,23 @@ interface ThemeSensitiveImageProps {
   ariaHidden?: boolean;
 }
 
-export default function ThemeSensitiveImage(props: ThemeSensitiveImageProps) {
+export default function ThemeSensitiveImage({
+  className,
+  lightImage,
+  darkImage,
+  alt,
+  ariaHidden,
+}: ThemeSensitiveImageProps) {
   return (
-    <picture className={props.className}>
-      <source srcSet={props.darkImage} media="(prefers-color-scheme: dark)" />
+    <picture className={className}>
+      <source srcSet={darkImage} media="(prefers-color-scheme: dark)" />
       <Image
-        src={props.lightImage}
-        alt={props.alt}
-        title={props.alt}
+        src={lightImage}
+        alt={alt}
+        title={alt}
         width={9999}
         height={9999}
-        aria-hidden={props.ariaHidden || false}
+        aria-hidden={ariaHidden || false}
       />
     </picture>
   );

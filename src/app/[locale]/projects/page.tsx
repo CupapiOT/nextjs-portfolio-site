@@ -88,7 +88,7 @@ export default function Home() {
           ["../", navbarText("home")],
           ["./projects", navbarText("projects")],
         ]}
-        whichLink={1}
+        currLinkIndex={1}
       />
       <main className="pt-[6rem] text-lg max-w-full w-full flex flex-col items-center justify-center gap-y-8">
         <div className="w-full sm:max-w-8/10 md:max-w-7/10  max-w-95/100 lg:!max-w-9/10 xl:!max-w-4/5 2xl:!max-w-3/5 flex justify-center align-center">
