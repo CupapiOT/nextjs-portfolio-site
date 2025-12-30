@@ -52,9 +52,9 @@
       "tools": "Alat-alat yang Saya Gunakan"
     },
     "contact": {
-      "copyEmail": "Klik untuk Menyalin Email",
-      "visitGitHub": "Kunjungi Profil GitHub Saya",
-      "resumeDownload": "Unduh CV Saya"
+      "copyEmail": "Klik untuk menyalin email saya",
+      "visitGitHub": "Kunjungi profil GitHub saya",
+      "resumeDownload": "Unduh CV saya"
     }
   },
   "projectsPage": {

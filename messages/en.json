@@ -52,9 +52,9 @@
       "tools": "Tools I Use"
     },
     "contact": {
-      "copyEmail": "Click to Copy My Email",
-      "visitGitHub": "Visit my GitHub Profile",
-      "resumeDownload": "Download my CV"
+      "copyEmail": "Click to copy my email",
+      "visitGitHub": "Visit my GitHub profile",
+      "resumeDownload": "Download my resume"
     }
   },
   "projectsPage": {
