@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Marvel Orleans - Siswa & Calon Developer",
-    "desc": "Marvel Orleans, developer pemula yang membangun proyek digital dan mengeksplorasi ketertarikannya pada software. Lihat karya-karyanya dan yang ia pelajari."
+    "title": "Marvel Orleans - Mahasiswa & Developer",
+    "desc": "Marvel Orleans adalah seorang developer yang membangun proyek digital dan mengeksplorasi minatnya pada sistem dan web. Lihat karya-karyanya dan apa yang sedang ia pelajari."
   },
   "navbar": {
     "home": "Beranda",
@@ -27,13 +27,13 @@
     },
     "about": {
       "title": "Siapakah Aku?",
-      "desc": "Hai, saya Marvel Orleans 👋, anak SMK di Indonesia yang suka programming. Setelah belajar sendiri lebih dari 2.5 tahun, saya juga punya beberapa side project sebagai bukti. Kalau Anda punya proyek yang ingin dikerjakan bersama, jangan ragu menghubungi saya!"
+      "desc": "Hai, aku Marvel Orleans 👋, mahasiswa di Indonesia yang suka programming. Setelah belajar sendiri untuk sekitar 3 tahun, aku juga punya beberapa side project sebagai bukti. Kalau punya proyek yang ingin dikerjakan bersama, jangan ragu menghubungi saya!"
     },
     "projects": {
       "title": "Proyek Saya",
-      "nextjsPortfolioSite": {
-        "title": "Situs Portofolio NextJS",
-        "desc": "Responsif dan multibahasa, dibuat dengan alat modern. Lengkap dengan tema terang dan gelap."
+      "mallocInC": {
+        "title": "Malloc-in-C",
+        "desc": "Allocator memori kustom dalam C yang mengimplementasikan malloc, calloc, realloc, dan free menggunakan sbrk dan mmap."
       },
       "animatedMatrices": {
         "title": "Animated Matrices",
@@ -62,6 +62,14 @@
       "title": "Situs Portofolio Sea",
       "desc": "Membuat situs portofolio responsif, berkolaborasi erat dengan klien di seluruh tahap desain dan pengembangan. Menyelesaikan produk akhir yang rapi, sesuai kebutuhan, dengan dua revisi klien, dan kompatibel di semua perangkat dan browser."
     },
+    "mallocInC": {
+      "title": "Malloc-in-C",
+      "desc": "Implementasi allocator memori dinamis C dari nol. Mengimplementasikan ulang malloc, calloc, realloc, dan free menggunakan sbrk maupun mmap, dengan alignment 16-byte, guard canaries, serta alat debugging kustom untuk memeriksa keadaan allocator."
+    },
+    "miniPaintTui": {
+      "title": "Mini Paint TUI",
+      "desc": "Editor pixel art berbasis terminal yang ditulis dalam C. Memiliki kanvas 32×32, alat menggambar dan bucket fill, input keyboard tingkat rendah menggunakan termios, serta ekspor ke format PPM dengan konversi opsional ke PNG/JPG melalui FFmpeg."
+    },
     "nextjsPortfolioSite": {
       "title": "Situs Portofolio NextJS",
       "desc": "Situs portofolio kaya-fitur yang saya bangun dari nol dan terus saya kembangkan dengan teknologi lebih modern. Mendukung mode terang/gelap serta tiga bahasa, termasuk dua versi aksara untuk bahasa Mandarin. Desain terinspirasi dari Tim Gatzke (tim-gatzke.de), kemudian dibangun ulang dan disempurnakan."
@@ -72,11 +80,11 @@
     },
     "animatedMatrices": {
       "title": "Animated Matrices",
-      "desc": "Proyek inisiatif pribadi untuk memvisualisasikan transformasi aljabar linier, dibuat untuk memperdalam pemahaman saya tentang matematika matriks. Proyek open source di GitHub."
+      "desc": "Aplikasi web interaktif untuk memvisualisasikan transformasi linear 2D. Buat vektor, susun matriks kustom, dan jelajahi transformasi langkah demi langkah dengan fitur undo/redo, operasi invers, serta penerapan matriks yang dapat diulang. Open source di GitHub."
     },
     "croquisImageReferences": {
       "title": "Croquis Image References",
-      "desc": "Menangani seluruh proses secara mandiri dalam membuat alat bantu sketsa referensi untuk seorang artis profesional (kakak saya). Berkembang melalui umpan balik rutin agar praktis dan mudah digunakan"
+      "desc": "Aplikasi referensi menggambar yang dibuat untuk seorang seniman profesional dan terus disempurnakan melalui masukan secara berkala. Dilengkapi timer yang dapat dikustomisasi, shortcut keyboard, pengelolaan antrean gambar, dan berbagai pengaturan untuk memperlancar sesi gesture drawing."
     },
     "githubAlt": "Tautan GitHub Proyek Ini",
     "websiteAlt": "Tautan Website Proyek Ini",
@@ -95,6 +103,7 @@
     "tailwindcss": "Tailwind CSS",
     "nextjs": "Framework NextJS",
     "reactjs": "Library React",
+    "nasm": "Netwide Assembler",
     "git": "Sistem Kontrol Versi Git",
     "github": "GitHub",
     "email": "Email",

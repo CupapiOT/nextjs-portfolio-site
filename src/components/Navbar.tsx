@@ -1,5 +1,6 @@
 "use client";
 import clsx from "clsx";
+import Link from "next/link";
 import React, { useState } from "react";
 
 interface NavbarProps {
@@ -16,7 +17,7 @@ export default function Navbar({ links, currLinkIndex }: NavbarProps) {
       <>
         {links.map(([link, name]) => (
           <li className="flex justify-center" key={link}>
-            <a
+            <Link
               className={clsx(
                 "px-3 py-1 rounded-xl text-center text-(--navbar-link) transition duration-300",
                 whichLink === link
@@ -29,7 +30,7 @@ export default function Navbar({ links, currLinkIndex }: NavbarProps) {
               }}
             >
               {name}
-            </a>
+            </Link>
           </li>
         ))}
       </>

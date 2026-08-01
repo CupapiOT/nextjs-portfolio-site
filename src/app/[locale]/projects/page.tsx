@@ -18,27 +18,40 @@ type Tab = "personal" | "paid";
 
 export default function Home() {
   const navbarText = useTranslations("navbar");
-  const presentDateText = useTranslations("otherText");
+  // const presentDateText = useTranslations("otherText");
 
   const personalProjects: ProjectDisplayProps[] = useMemo(() => [
     {
-      id: "nextjs-portfolio-site",
-      tags: ["NextJS", "React", "Tailwind CSS", "TypeScript"],
-      gitHubLink: "https://github.com/CupapiOT/nextjs-portfolio-site",
-      year: ["2025"],
+      id: "malloc-in-c",
+      tags: ["C23", "GCC", "GDB", "Memory Management"],
+      gitHubLink: "https://github.com/CupapiOT/malloc-in-c",
+      year: ["2026"],
     },
     {
-      id: "simple-portfolio-site",
-      tags: ["HTML", "CSS", "JavaScript"],
-      gitHubLink: "https://github.com/CupapiOT/CupapiOT.github.io",
-      websiteLink: "https://cupapiot.github.io",
-      year: ["2024", "2025"],
+      id: "mini-paint-tui",
+      tags: ["C99", "GCC", "GDB", "FFmpeg", "Terminal User Interface"],
+      gitHubLink: "https://github.com/CupapiOT/mini-paint-tui",
+      year: ["2026"],
     },
+    {
+      id: "nextjs-portfolio-site",
+      tags: ["NextJS", "React", "Tailwind CSS", "TypeScript"],
+      gitHubLink: "https://github.com/CupapiOT/mini-paint-tui",
+      year: ["2025"],
+    },
+    // NOTE: No longer useful.
+    // {
+    //   id: "simple-portfolio-site",
+    //   tags: ["HTML", "CSS", "JavaScript"],
+    //   gitHubLink: "https://github.com/CupapiOT/CupapiOT.github.io",
+    //   websiteLink: "https://cupapiot.github.io",
+    //   year: ["2024", "2025"],
+    // },
     {
       id: "animated-matrices",
       tags: ["Python", "Plotly for Python", "Plotly Dash", "Numpy"],
       gitHubLink: "https://github.com/CupapiOT/animated-matrices",
-      year: ["2024", presentDateText("presentDate")],
+      year: ["2024", "2025"],
     },
     {
       id: "croquis-image-references",
@@ -46,16 +59,19 @@ export default function Home() {
       gitHubLink: "https://github.com/CupapiOT/croquis-image-references",
       year: ["2023", "2024"],
     },
-  ], [presentDateText]);
-
-  const paidProjects: ProjectDisplayProps[] = useMemo(() => [
-    {
-      id: "sea-portfolio-site",
-      tags: ["NextJS", "React", "Tailwind CSS", "TypeScript"],
-      year: ["2025"],
-      websiteLink: "https://seaportfolio.vercel.app"
-    },
   ], []);
+
+  const paidProjects: ProjectDisplayProps[] = useMemo(
+    () => [
+      {
+        id: "sea-portfolio-site",
+        tags: ["NextJS", "React", "Tailwind CSS", "TypeScript"],
+        year: ["2025"],
+        websiteLink: "https://seaportfolio.vercel.app",
+      },
+    ],
+    [],
+  );
 
   const projectsText = useTranslations("projectsPage");
   const [selectedTab, setTab] = useState<Tab>("personal");
@@ -116,7 +132,6 @@ export default function Home() {
             onClick={() => setSelectedTab("paid")}
           >
             {projectsText("commercialTabButton")}
-
           </button>
         </div>
 

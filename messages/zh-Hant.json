@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Marvel Orleans - 學生 & 准開發者",
-    "desc": "Marvel Orleans 是一位正在學習開發的學生，熱衷於構建數字項目並探索他對網頁的熱情。來看看他的作品和學習過程吧！"
+    "title": "Marvel Orleans - 學生 & 開發者",
+    "desc": "Marvel Orleans 是一位熱衷於開發數字項目、探索系統與 Web 技術的開發者。歡迎看看他的作品，以及他正在學習的內容。"
   },
   "navbar": {
     "home": "首頁",
@@ -27,10 +27,14 @@
     },
     "about": {
       "title": "我是誰？",
-      "desc": "你好，我是 Marvel Orleans。👋 我是來自印度尼西亞的一名高中生，對編程充滿熱情。我已經自學編程 2.5 年多了，並獨立完成了一些小項目作為成果展示。除此之外，我也學中文學了 12 個多月了，希望以後能用中文和更多人交流。如果你有感興趣的項目，歡迎隨時聯繫我。"
+      "desc": "你好，我是 Marvel Orleans。👋 我是來自印度尼西亞的一名大學生，對編程充滿熱情。我已經自學編程約 3 年了，也完成了一些項目作為成果展示。此外，我學習中文也已經一年半多了，希望以後能用中文和更多人交流。如果你有想一起合作的項目，歡迎隨時聯繫我。"
     },
     "projects": {
       "title": "項目概覽",
+      "mallocInC": {
+        "title": "Malloc-in-C",
+        "desc": "一個用 C 從零實現的內存分配器，實現了 malloc、calloc、realloc 和 free，並支持 sbrk、mmap、16 字節內存對齊及內置調試工具。"
+      },
       "nextjsPortfolioSite": {
         "title": "NextJS 作品集網站",
         "desc": "響應式且支持多語言，使用現代技術構建。配有淺色和深色主題。"
@@ -62,6 +66,14 @@
       "title": "Sea 作品集網站",
       "desc": "創建了一個完全響應式的作品集網站，在設計和開發的每個階段都與客戶緊密合作。交付了一個精緻的最終產品，滿足所有需求，包括兩次客戶修改，並可在各種設備和瀏覽器上正常運行。"
     },
+    "mallocInC": {
+      "title": "Malloc-in-C",
+      "desc": "一個從零開始實現的 C 動態內存分配器。重新實現了 malloc、calloc、realloc 和 free，支持 sbrk 與 mmap 兩種分配策略，並實現了 16 字節內存對齊、guard canary 溢出檢測，以及用於檢查分配器狀態的自定義調試工具。"
+    },
+    "miniPaintTui": {
+      "title": "Mini Paint TUI",
+      "desc": "一款使用 C 編寫的終端像素畫編輯器。支持 32×32 畫布、繪製與填充工具、基於 termios 的底層鍵盤輸入，並可導出為 PPM 格式，以及通過 FFmpeg 可選轉換為 PNG/JPG。"
+    },
     "nextjsPortfolioSite": {
       "title": "NextJS 作品集網站",
       "desc": "一個由我獨立開發並持續完善的作品集網站。支持淺色和深色模式，同時提供三種語言，其中中文包含簡體和繁體兩種書寫方式。設計靈感來自 Tim Gatzke（tim-gatzke.de），在此基礎上重建並不斷優化。"
@@ -72,11 +84,11 @@
     },
     "animatedMatrices": {
       "title": "Animated Matrices",
-      "desc": "一個自發啟動的項目，旨在幫助可視化線性代數中的變換，加深我對矩陣數學的理解。已開源並託管在 GitHub 上。"
+      "desc": "一個用於可視化二維線性變換的交互式 Web 應用。你可以創建向量、構建自定義矩陣，並通過撤銷/重做、逆變換和重複應用矩陣等功能，逐步探索矩陣變換。項目已在 GitHub 開源。"
     },
     "croquisImageReferences": {
       "title": "Croquis Image References",
-      "desc": "獨立完成的參考圖繪畫工具，為我哥哥（專業畫師）開發。該工具在反覆的反饋中不斷完善，更加實用且易於使用。"
+      "desc": "一款為專業畫師打造、並根據持續反饋不斷改進的繪畫參考工具。支持自定義計時器、鍵盤快捷鍵、圖片隊列管理，以及多種工作流程設置，讓速寫練習更加高效。"
     },
     "githubAlt": "該項目的 GitHub 鏈接",
     "websiteAlt": "該項目的網站鏈接",
@@ -94,6 +106,7 @@
     "tailwindcss": "Tailwind CSS",
     "nextjs": "NextJS 框架",
     "reactjs": "React 庫",
+    "nasm": "Netwide Assembler",
     "git": "Git 版本控制",
     "github": "GitHub",
     "email": "電子郵箱",

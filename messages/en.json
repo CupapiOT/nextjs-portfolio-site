@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Marvel Orleans - Student & Aspiring Developer",
-    "desc": "Marvel Orleans is a developer-in-training building digital projects and exploring his passion for the web. Take a look at his work and what he's learning."
+    "title": "Marvel Orleans - Student & Developer",
+    "desc": "Marvel Orleans is a developer building digital projects and exploring his passion for systems and the web. Take a look at his work and what he's learning."
   },
   "navbar": {
     "home": "Home",
@@ -27,13 +27,13 @@
     },
     "about": {
       "title": "Who Am I?",
-      "desc": "Hey, Marvel Orleans here. 👋 I'm a highshooler in Indonesia with a passion in programming. I've been teaching myself to code for over 2.5 years now, and I've built some projects to show for it. So, if you've got a project you'd like to work on, feel free to contact me."
+      "desc": "Hey, Marvel Orleans here. 👋 I'm a college student in Indonesia with a passion in programming. I've been teaching myself to code for about 3 years now, and I've built some projects to show for it. Got a project you'd like to work on? Feel free to contact me."
     },
     "projects": {
       "title": "Projects Overview",
-      "nextjsPortfolioSite": {
-        "title": "NextJS Portfolio Site",
-        "desc": "Responsive and multilingual, built with modern tech. Complete with light and dark themes."
+      "mallocInC": {
+        "title": "Malloc-in-C",
+        "desc": "A custom C memory allocator implementing malloc, calloc, realloc, and free with sbrk, mmap, 16-byte alignment, and built-in debugging tools."
       },
       "animatedMatrices": {
         "title": "Animated Matrices",
@@ -62,9 +62,17 @@
       "title": "Sea Portfolio Site",
       "desc": "Created a fully responsive portfolio site, collaborating closely with the client through every stage of design and development. Delivered a polished final product that met all requirements, included two client revisions, and worked across devices and browsers."
     },
+    "mallocInC": {
+      "title": "Malloc-in-C",
+      "desc": "A from-scratch implementation of C's dynamic memory allocator. Reimplements malloc, calloc, realloc, and free using both sbrk and mmap, with 16-byte alignment, guard canaries, and custom debugging tools for inspecting allocator state."
+    },
+    "miniPaintTui": {
+      "title": "Mini Paint TUI",
+      "desc": "A terminal-based pixel art editor written in C. Features a 32×32 canvas, drawing and fill tools, low-level keyboard input using termios, and export to PPM with optional PNG/JPG conversion with FFmpeg."
+    },
     "nextjsPortfolioSite": {
       "title": "NextJS Portfolio Site",
-      "desc": "A polished, evolving portfolio site built from scratch—now with light/dark mode and support for three languages, including both Chinese scripts. Design inspired by Tim Gatzke (tim-gatzke.de), rebuilt and iterated upon."
+      "desc": "A personal portfolio built with React and TypeScript, featuring internationalization, theming, and reusable UI components. Designed as a production-ready website rather than a one-off showcase. Design inspired by Tim Gatzke (tim-gatzke.de), rebuilt and iterated upon."
     },
     "simplePortfolioSite": {
       "title": "Simple Portfolio Site",
@@ -72,11 +80,11 @@
     },
     "animatedMatrices": {
       "title": "Animated Matrices",
-      "desc": "A self-initiated project to help visualize linear algebra transformations, built to deepen my understanding of matrix math. Open source on GitHub."
+      "desc": "An interactive web app for visualizing 2D linear transformations. Create vectors, build custom matrices, and explore transformations step by step with undo/redo, inverse operations, and repeatable matrix applications. Open source on GitHub."
     },
     "croquisImageReferences": {
       "title": "Croquis Image References",
-      "desc": "Handled all aspects solo in building a reference-sketching tool for a professional artist (my brother). Evolved through regular feedback, for practicality and ease of use."
+      "desc": "A reference-sketching tool built for a professional artist and refined through regular feedback. Features customizable timers, keyboard shortcuts, image queue management, and workflow-focused settings for gesture drawing sessions."
     },
     "githubAlt": "Github Link to This Project",
     "websiteAlt": "Website Link to This Project",
@@ -94,6 +102,7 @@
     "tailwindcss": "Tailwind CSS",
     "nextjs": "NextJS Framework",
     "reactjs": "React Library",
+    "nasm": "Netwide Assembler",
     "git": "Git Version Control",
     "github": "GitHub",
     "email": "Email",

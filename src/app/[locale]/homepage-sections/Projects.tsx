@@ -58,16 +58,7 @@ export default function Projects({
   pageLink,
 }: ProjectsSectionProps) {
   const projectsText = useTranslations("homePage.projects");
-  const presentDateText = useTranslations("otherText");
-  const nextjsPortfolioSiteText = useTranslations(
-    "homePage.projects.nextjsPortfolioSite",
-  );
-  const animatedMatricesText = useTranslations(
-    "homePage.projects.animatedMatrices",
-  );
-  const croquisImageReferencesText = useTranslations(
-    "homePage.projects.croquisImageReferences",
-  );
+  // const presentDateText = useTranslations("otherText");
 
   return (
     <Section
@@ -76,39 +67,31 @@ export default function Projects({
       fadeInDirection={fadeInDirection}
     >
       <h2 className="section-header">{projectsText("title")}</h2>
-      <ul className="flex flex-col gap-y-2 mb-2 self-center w-full sm:max-w-9/10 lg:max-w-full">
+      <ul className="flex flex-col gap-y-2 mb-10 lg:mb-2 self-center w-full sm:max-w-9/10 lg:max-w-full">
         {/* There should only ever be three projects at a time here. */}
         <ProjectItem
-          title={nextjsPortfolioSiteText("title")}
-          desc={nextjsPortfolioSiteText("desc")}
+          title={projectsText("mallocInC.title")}
+          desc={projectsText("mallocInC.desc")}
           link="./projects"
           year={["2025"]}
-          tags={["NextJS", "React", "Tailwind", "TypeScript"]}
+          tags={["C23", "GCC", "GDB", "Memory Allocation"]}
         />
         <HorizontalLine width="full" className="my-2" />
         <ProjectItem
-          title={animatedMatricesText("title")}
-          desc={animatedMatricesText("desc")}
+          title={projectsText("animatedMatrices.title")}
+          desc={projectsText("animatedMatrices.desc")}
           link="./projects"
-          year={["2024", presentDateText("presentDate")]}
+          year={["2024", "2025"]}
           tags={["Python", "Plotly", "Plotly Dash", "Numpy"]}
         />
         <HorizontalLine width="full" className="my-2" />
         <ProjectItem
-          title={croquisImageReferencesText("title")}
-          desc={croquisImageReferencesText("desc")}
+          title={projectsText("croquisImageReferences.title")}
+          desc={projectsText("croquisImageReferences.desc")}
           link="./projects"
           tags={["Python", "CustomTkinter"]}
           year={["2023", "2024"]}
         />
-        {pageLink !== undefined ? (
-          <HorizontalLine
-            width="full"
-            className="mb-8 my-2 lg:mb-6 min-[114rem]:mb-[-5rem]"
-          />
-        ) : (
-          ""
-        )}
         {pageLink !== undefined ? (
           <a
             className="absolute bottom-5 hover:underline hover:text-cyan-500 hover:text-[1rem] translate duration-300"

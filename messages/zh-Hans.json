@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Marvel Orleans - 学生 & 准开发者",
-    "desc": "Marvel Orleans 是一位正在学习开发的学生，热衷于构建数字项目并探索他对网页的热情。来看看他的作品和学习过程吧！"
+    "title": "Marvel Orleans - 学生 & 开发者",
+    "desc": "Marvel Orleans 是一位热衷于开发数字项目、探索系统与 Web 技术的开发者。欢迎看看他的作品，以及他正在学习的内容。"
   },
   "navbar": {
     "home": "首页",
@@ -27,13 +27,13 @@
     },
     "about": {
       "title": "我是谁？",
-      "desc": "你好，我是 Marvel Orleans。👋 我是来自印度尼西亚的一名高中生，对编程充满热情。我已经自学编程 2.5 年多了，并独立完成了一些小项目作为成果展示。除此之外，我也学中文学了 12 个多月了，希望以后能用中文和更多人交流。如果你有感兴趣的项目，欢迎随时联系我。"
+      "desc": "你好，我是 Marvel Orleans。👋 我是来自印度尼西亚的一名大学生，对编程充满热情。我已经自学编程约 3 年了，也完成了一些项目作为成果展示。此外，我学习中文也已经一年半多了，希望以后能用中文和更多人交流。如果你有想一起合作的项目，欢迎随时联系我。"
     },
     "projects": {
       "title": "项目概览",
-      "nextjsPortfolioSite": {
-        "title": "NextJS 作品集网站",
-        "desc": "响应式且支持多语言，使用现代技术构建。配有浅色和深色主题。"
+      "mallocInC": {
+        "title": "Malloc-in-C",
+        "desc": "一个用 C 从零实现的内存分配器，实现了 malloc、calloc、realloc 和 free，并支持 sbrk、mmap、16 字节内存对齐及内置调试工具。"
       },
       "animatedMatrices": {
         "title": "Animated Matrices",
@@ -62,6 +62,14 @@
       "title": "Sea 作品集网站",
       "desc": "创建了一个完全响应式的作品集网站，在设计和开发的每个阶段都与客户紧密合作。交付了一个精致的最终产品，满足所有需求，包括两次客户修改，并可在各种设备和浏览器上正常运行。"
     },
+    "mallocInC": {
+      "title": "Malloc-in-C",
+      "desc": "一个从零开始实现的 C 动态内存分配器。重新实现了 malloc、calloc、realloc 和 free，支持 sbrk 与 mmap 两种分配策略，并实现了 16 字节内存对齐、guard canary 溢出检测，以及用于检查分配器状态的自定义调试工具。"
+    },
+    "miniPaintTui": {
+      "title": "Mini Paint TUI",
+      "desc": "一款使用 C 编写的终端像素画编辑器。支持 32×32 画布、绘制与填充工具、基于 termios 的底层键盘输入，并可导出为 PPM 格式，以及通过 FFmpeg 可选转换为 PNG/JPG。"
+    },
     "nextjsPortfolioSite": {
       "title": "NextJS 作品集网站",
       "desc": "一个由我独立开发并持续完善的作品集网站。支持浅色和深色模式，同时提供三种语言，其中中文包含简体和繁体两种书写方式。设计灵感来自 Tim Gatzke（tim-gatzke.de），在此基础上重建并不断优化。"
@@ -72,11 +80,11 @@
     },
     "animatedMatrices": {
       "title": "Animated Matrices",
-      "desc": "一个自发启动的项目，旨在帮助可视化线性代数中的变换，加深我对矩阵数学的理解。已开源并托管在 GitHub 上。"
+      "desc": "一个用于可视化二维线性变换的交互式 Web 应用。你可以创建向量、构建自定义矩阵，并通过撤销/重做、逆变换和重复应用矩阵等功能，逐步探索矩阵变换。项目已在 GitHub 开源。"
     },
     "croquisImageReferences": {
       "title": "Croquis Image References",
-      "desc": "独立完成的参考图绘画工具，为我哥哥（专业画师）开发。该工具在反复的反馈中不断完善，更加实用且易于使用。"
+      "desc": "一款为专业画师打造、并根据持续反馈不断改进的绘画参考工具。支持自定义计时器、键盘快捷键、图片队列管理，以及多种工作流程设置，让速写练习更加高效。"
     },
     "githubAlt": "该项目的 GitHub 链接",
     "websiteAlt": "该项目的网站链接",
@@ -94,6 +102,7 @@
     "tailwindcss": "Tailwind CSS",
     "nextjs": "NextJS 框架",
     "reactjs": "React 库",
+    "nasm": "Netwide Assembler",
     "git": "Git 版本控制",
     "github": "GitHub",
     "email": "电子邮箱",

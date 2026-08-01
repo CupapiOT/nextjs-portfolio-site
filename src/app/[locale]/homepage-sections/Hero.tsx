@@ -17,11 +17,11 @@ export default function Hero({ id, className, fadeInDirection }: SectionProps) {
         Marvel Orleans
       </h1>
       <Image
-        className="h-min aspect-video object-cover rounded-lg lg:h-full"
+        className="h-min aspect-video object-cover object-top rounded-lg lg:h-full"
         src="/src/profile-photo.webp"
         alt={heroText("profileImgAlt")}
-        width={9999}
-        height={9999}
+        width={1200}
+        height={1200}
       />
       <p className="text-sm font-mono text-center text-gray-700 dark:text-gray-300">
         {heroText("location")}

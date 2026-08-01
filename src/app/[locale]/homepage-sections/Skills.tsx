@@ -42,10 +42,18 @@ export default function Skills({
     <Section id={id} className={className} fadeInDirection={fadeInDirection}>
       <h2 className="section-header mb-6">{headerText("title")}</h2>
       <h3 className={h3Classes}>{headerText("best")}</h3>
-      <div className="flex justify-center">
+      <div className={skillsIconContainerClasses}>
         <SkillsIcon
           src="/src/skills/icon-python.svg"
           alt={skillsAlts("python")}
+        />
+        <SkillsIcon
+          src="/src/skills/icon-react.svg"
+          alt={skillsAlts("reactjs")}
+        />
+        <SkillsIcon
+          src="/src/skills/icon-typescript.svg"
+          alt={skillsAlts("typescript")}
         />
       </div>
       <HorizontalLine className="my-4" />
@@ -59,17 +67,16 @@ export default function Skills({
           alt={skillsAlts("javascript")}
         />
         <SkillsIcon
-          src="/src/skills/icon-typescript.svg"
-          alt={skillsAlts("typescript")}
+          src="/src/skills/icon-tailwindcss.svg"
+          alt={skillsAlts("tailwindcss")}
         />
-        <SkillsIcon src="/src/skills/icon-tailwindcss.svg" alt="Tailwind CSS" />
         <ThemeSensitiveImage
           className="aspect-square w-[3.5em] lg:w-[3em]"
           lightImage="/src/skills/icon-nextjs-black.svg"
           darkImage="/src/skills/icon-nextjs-white.svg"
           alt={skillsAlts("nextjs")}
         />
-        <SkillsIcon src="/src/skills/icon-react.svg" alt="React Framework" />
+        <SkillsIcon src="/src/skills/icon-nasm.svg" alt={skillsAlts("nasm")} />
       </div>
       <HorizontalLine className="my-4" />
       <h3 className={h3Classes}>{headerText("tools")}</h3>
