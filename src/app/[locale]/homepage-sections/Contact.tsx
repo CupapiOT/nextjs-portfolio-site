@@ -49,8 +49,8 @@ export default function Contact({
       >
         <ThemeSensitiveImage
           className={imgClasses}
-          lightImage="/src/general/icon-email-black.svg"
-          darkImage="/src/general/icon-email-white.svg"
+          lightImage="/general/icon-email-black.svg"
+          darkImage="/general/icon-email-white.svg"
           alt={skillsAlts("email")}
         />
         <span className={spanClasses}>{email}</span>
@@ -63,8 +63,8 @@ export default function Contact({
       >
         <ThemeSensitiveImage
           className={imgClasses}
-          lightImage="/src/general/icon-github-black.svg"
-          darkImage="/src/general/icon-github-white.svg"
+          lightImage="/general/icon-github-black.svg"
+          darkImage="/general/icon-github-white.svg"
           alt={skillsAlts("github")}
         />
         <span className={spanClasses}>{githubName}</span>
@@ -76,8 +76,8 @@ export default function Contact({
       >
         <ThemeSensitiveImage
           className={imgClasses}
-          lightImage="/src/general/icon-docs-black.svg"
-          darkImage="/src/general/icon-docs-white.svg"
+          lightImage="/general/icon-docs-black.svg"
+          darkImage="/general/icon-docs-white.svg"
           alt={skillsAlts("document")}
         />
         <span className={spanClasses}>{contactText("resumeDownload")}</span>

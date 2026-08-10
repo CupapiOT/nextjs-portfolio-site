@@ -139,8 +139,8 @@ export default function ProjectCard({
             >
               <ThemeSensitiveImage
                 className={clsx(linkImageClasses, "brightness-50")}
-                lightImage="/src/general/icon-github-black.svg"
-                darkImage="/src/general/icon-github-white.svg"
+                lightImage="/general/icon-github-black.svg"
+                darkImage="/general/icon-github-white.svg"
                 alt={
                   projectCardText("githubAlt") +
                   ` (${projectCardText("comingSoon")})`
@@ -159,8 +159,8 @@ export default function ProjectCard({
               >
                 <ThemeSensitiveImage
                   className={linkImageClasses}
-                  lightImage="/src/general/icon-github-black.svg"
-                  darkImage="/src/general/icon-github-white.svg"
+                  lightImage="/general/icon-github-black.svg"
+                  darkImage="/general/icon-github-white.svg"
                   alt={projectCardText("githubAlt")}
                 />
               </a>
@@ -176,8 +176,8 @@ export default function ProjectCard({
             >
               <ThemeSensitiveImage
                 className={linkImageClasses}
-                lightImage="/src/general/icon-link-black.svg"
-                darkImage="/src/general/icon-link-white.svg"
+                lightImage="/general/icon-link-black.svg"
+                darkImage="/general/icon-link-white.svg"
                 alt={projectCardText("websiteAlt")}
               />
             </a>

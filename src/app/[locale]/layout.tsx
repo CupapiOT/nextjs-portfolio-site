@@ -51,7 +51,7 @@ export async function generateMetadata({
       description: t("desc"),
       siteName: t("title"),
       url: "https://marvel-orleans.vercel.app",
-      images: "/src/projects/nextjs-portfolio-site.webp",
+      images: "/projects/nextjs-portfolio-site.webp",
     },
     twitter: {
       title: t("title"),

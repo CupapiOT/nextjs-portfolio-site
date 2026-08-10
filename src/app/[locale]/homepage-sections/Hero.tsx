@@ -18,7 +18,7 @@ export default function Hero({ id, className, fadeInDirection }: SectionProps) {
       </h1>
       <Image
         className="h-min aspect-video object-cover object-top rounded-lg lg:h-full"
-        src="/src/profile-photo.webp"
+        src="/profile-photo.webp"
         alt={heroText("profileImgAlt")}
         width={1200}
         height={1200}

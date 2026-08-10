@@ -44,48 +44,48 @@ export default function Skills({
       <h3 className={h3Classes}>{headerText("best")}</h3>
       <div className={skillsIconContainerClasses}>
         <SkillsIcon
-          src="/src/skills/icon-python.svg"
+          src="/skills/icon-python.svg"
           alt={skillsAlts("python")}
         />
         <SkillsIcon
-          src="/src/skills/icon-react.svg"
+          src="/skills/icon-react.svg"
           alt={skillsAlts("reactjs")}
         />
         <SkillsIcon
-          src="/src/skills/icon-typescript.svg"
+          src="/skills/icon-typescript.svg"
           alt={skillsAlts("typescript")}
         />
       </div>
       <HorizontalLine className="my-4" />
       <h3 className={h3Classes}>{headerText("other")}</h3>
       <div className={skillsIconContainerClasses}>
-        <SkillsIcon src="/src/skills/icon-c.svg" alt={skillsAlts("c")} />
-        <SkillsIcon src="/src/skills/icon-html.svg" alt={skillsAlts("html")} />
-        <SkillsIcon src="/src/skills/icon-css.svg" alt={skillsAlts("css")} />
+        <SkillsIcon src="/skills/icon-c.svg" alt={skillsAlts("c")} />
+        <SkillsIcon src="/skills/icon-html.svg" alt={skillsAlts("html")} />
+        <SkillsIcon src="/skills/icon-css.svg" alt={skillsAlts("css")} />
         <SkillsIcon
-          src="/src/skills/icon-javascript.svg"
+          src="/skills/icon-javascript.svg"
           alt={skillsAlts("javascript")}
         />
         <SkillsIcon
-          src="/src/skills/icon-tailwindcss.svg"
+          src="/skills/icon-tailwindcss.svg"
           alt={skillsAlts("tailwindcss")}
         />
         <ThemeSensitiveImage
           className="aspect-square w-[3.5em] lg:w-[3em]"
-          lightImage="/src/skills/icon-nextjs-black.svg"
-          darkImage="/src/skills/icon-nextjs-white.svg"
+          lightImage="/skills/icon-nextjs-black.svg"
+          darkImage="/skills/icon-nextjs-white.svg"
           alt={skillsAlts("nextjs")}
         />
-        <SkillsIcon src="/src/skills/icon-nasm.svg" alt={skillsAlts("nasm")} />
+        <SkillsIcon src="/skills/icon-nasm.svg" alt={skillsAlts("nasm")} />
       </div>
       <HorizontalLine className="my-4" />
       <h3 className={h3Classes}>{headerText("tools")}</h3>
       <div className={skillsIconContainerClasses}>
-        <SkillsIcon src="/src/skills/icon-git.svg" alt={skillsAlts("git")} />
+        <SkillsIcon src="/skills/icon-git.svg" alt={skillsAlts("git")} />
         <ThemeSensitiveImage
           className="aspect-square w-[3.5em] lg:w-[3em]"
-          lightImage="/src/general/icon-github-black.svg"
-          darkImage="/src/general/icon-github-white.svg"
+          lightImage="/general/icon-github-black.svg"
+          darkImage="/general/icon-github-white.svg"
           alt={skillsAlts("github")}
         />
       </div>

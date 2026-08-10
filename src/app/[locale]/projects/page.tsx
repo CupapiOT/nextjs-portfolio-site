@@ -137,7 +137,7 @@ export default function Home() {
               key={project.id}
               id={project.id}
               title={projectsText(`${intlId}.title`)}
-              imgSrc={`/src/projects/${project.id}.webp`}
+              imgSrc={`/projects/${project.id}.webp`}
               desc={projectsText(`${intlId}.desc`)}
               gitHubLink={project.gitHubLink}
               websiteLink={project.websiteLink}

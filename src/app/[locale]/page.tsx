@@ -30,7 +30,7 @@ export default function Home() {
         email="hellomarvelorleans@gmail.com"
         githubLink="https://github.com/CupapiOT"
         githubName="Marvel Orleans"
-        resumeSrc="/src/docs/Marvel_Orleans_Resume.pdf"
+        resumeSrc="/docs/Marvel_Orleans_Resume.pdf"
         fadeInDirection="LEFT"
       />
     </main>
