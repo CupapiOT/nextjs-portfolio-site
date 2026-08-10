@@ -7,6 +7,8 @@ import { Inter, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import LocaleSwitcher from "./locale-switcher/LocaleSwitcher";
 import clsx from "clsx";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -89,7 +91,9 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider>
           <LocaleSwitcher />
+          <Navbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
