@@ -34,10 +34,10 @@ export default function BlankSection({
   }, []);
 
   const whichDirection: Record<FadeInDirection, string> = {
-    UP: "-translate-y-1/3",
-    DOWN: "translate-y-1/3",
-    RIGHT: "-translate-x-1/3",
-    LEFT: "translate-x-1/3",
+    UP: "lg:-translate-y-1/3",
+    DOWN: "lg:translate-y-1/3",
+    RIGHT: "lg:-translate-x-1/3",
+    LEFT: "lg:translate-x-1/3",
     NONE: "",
   };
 
@@ -46,7 +46,7 @@ export default function BlankSection({
       id={id}
       ref={ref}
       className={clsx(
-        "animate-presets blur-xs w-95/100 responsive-width flex flex-col bg-(--section-background) justify-center rounded-xl p-5",
+        "animate-presets blur-xs w-95/100 responsive-width flex flex-col bg-(--section-background) justify-center rounded-xl p-5 sm:py-7 xl:p-5 delay-0 max-xl:translate-y-1/5",
         whichDirection[fadeInDirection],
         className || "",
       )}

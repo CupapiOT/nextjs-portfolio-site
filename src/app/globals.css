@@ -1,46 +1,49 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #f7f7f6;
+  --background: #f0f0ef;
   --foreground: #222222;
-  --section-background: #fcfcfb;
-  --section-background-lighter: #fefefd;
+  --intro-background: #a2f4fd;
+  --section-background: #f9f9f8;
+  --section-background-lighter: #fdfdfc;
   --horizontal-line-color: #ededed;
   --navbar-background: #f7f7f680;
   --navbar-link: #5e5e55;
   --navbar-link-bg: #f4f4f4;
   --navbar-link-hover: #9a9a99;
-  --contact-button-bg: #f1f1f0;
-  --contact-button-hover: #e8e8e7;
+  --contact-button-bg: #ffffff;
+  --contact-button-hover: #fbfbfa;
 }
 
 @theme inline {
+  --color-background: var(--background);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #eeeeee;
-    --section-background: #18181b;
-    --section-background-lighter: #28282b;
-    --horizontal-line-color: #313131;
-    --navbar-background: #0a0a0a80;
-    --navbar-link: #a1a1aa;
-    --navbar-link-bg: #383838;
-    --navbar-link-hover: #66666b;
-    --contact-button-bg: #28282b;
-    --contact-button-hover: #38383b;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #eeeeee;
+  --intro-background: #053345;
+  --section-background: #18181b;
+  --section-background-lighter: #28282b;
+  --horizontal-line-color: #313131;
+  --navbar-background: #0a0a0a80;
+  --navbar-link: #a1a1aa;
+  --navbar-link-bg: #383838;
+  --navbar-link-hover: #66666b;
+  --contact-button-bg: #28282b;
+  --contact-button-hover: #38383b;
 }
 
 /*

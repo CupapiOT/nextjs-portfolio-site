@@ -9,12 +9,12 @@ export default function Home() {
   return (
     <main className="overflow-hidden pt-[6rem] pb-10 max-w-[1152px] w-full h-min flex flex-col items-center gap-y-3 lg:text-sm lg:max-w-95/100 lg:grid lg:grid-cols-3 grid-rows-[h-min_h-min_h-min] lg:aspect-auto justify-items-center lg:gap-3 xl:max-w-4/5 2xl:max-w-3/5">
       <Hero
-        className="lg:row-start-2 lg:col-start-2 lg:!duration-200"
+        className="lg:row-start-2 lg:col-start-2 lg:duration-200"
         fadeInDirection="NONE"
       />
       <div className="flex flex-col relative w-full gap-y-3 items-center lg:row-start-2 lg:row-span-2 lg:h-full">
-        <Intro className="delay-[400ms]" fadeInDirection="RIGHT" />
-        <Skills className="delay-300" fadeInDirection="DOWN" />
+        <Intro className="lg:delay-[400ms]" fadeInDirection="RIGHT" />
+        <Skills className="lg:delay-300" fadeInDirection="DOWN" />
       </div>
       <Projects
         className="lg:row-start-1 lg:row-span-2 lg:col-start-3 lg:delay-100"

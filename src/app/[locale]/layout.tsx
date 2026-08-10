@@ -1,24 +1,12 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { Inter, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import LocaleSwitcher from "./locale-switcher/LocaleSwitcher";
-import clsx from "clsx";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const interSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export async function generateMetadata({
   params,
@@ -77,25 +65,12 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // Enable static rendering
-  setRequestLocale(locale);
-
   return (
-    <html className="scroll-smooth" lang={locale}>
-      <body
-        className={clsx(
-          "relative flex justify-center antialiased",
-          interSans.className,
-          geistMono.variable,
-        )}
-      >
-        <NextIntlClientProvider>
-          <LocaleSwitcher />
-          <Navbar />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider>
+      <LocaleSwitcher />
+      <Navbar />
+      {children}
+      <Footer />
+    </NextIntlClientProvider>
   );
 }

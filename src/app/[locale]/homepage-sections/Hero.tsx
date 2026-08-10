@@ -22,6 +22,7 @@ export default function Hero({ id, className, fadeInDirection }: SectionProps) {
         alt={heroText("profileImgAlt")}
         width={1200}
         height={1200}
+        loading="eager"
       />
       <p className="text-sm font-mono text-center text-gray-700 dark:text-gray-300">
         {heroText("location")}

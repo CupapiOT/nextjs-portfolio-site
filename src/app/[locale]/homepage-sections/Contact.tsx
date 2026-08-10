@@ -29,7 +29,7 @@ export default function Contact({
 }: ContactProps) {
   const buttonClasses =
     "w-full sm:max-w-4/5 lg:max-w-full lg:h-full grid grid-cols-[2em_1fr] items-center p-2 px-5 gap-x-4 rounded-xl cursor-pointer " +
-    "bg-(--contact-button-bg) hover:bg-(--contact-button-hover) transform duration-300 hover:scale-[101%] hover:shadow-md dark:hover:shadow-lg";
+    "bg-(--contact-button-bg) hover:bg-(--contact-button-hover) transform duration-300 hover:scale-[101%] hover:shadow-sm dark:hover:shadow-lg";
   const spanClasses =
     "w-full text-left text-[min(clamp(calc(0.45em+2vw),calc(0.6em+1vw),1em),_1.25em)] " +
     "max-[24rem]:text-sm max-[22rem]:text-[0.75em]";
@@ -44,7 +44,7 @@ export default function Contact({
     >
       <button
         onClick={() => copyTextToClipboard(email)}
-        className={buttonClasses + (email !== undefined ? "" : " hidden")}
+        className={clsx(buttonClasses, email !== undefined ? "" : " hidden")}
         title={contactText("copyEmail")}
       >
         <ThemeSensitiveImage

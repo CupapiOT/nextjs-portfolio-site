@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 
 interface ThemeSensitiveImageProps {
@@ -17,10 +18,27 @@ export default function ThemeSensitiveImage({
   ariaHidden,
 }: ThemeSensitiveImageProps) {
   return (
-    <picture className={className}>
-      <source srcSet={darkImage} media="(prefers-color-scheme: dark)" />
+    <picture className={clsx("relative", className)}>
       <Image
+        className={clsx(
+          "transition-all duration-300",
+          "opacity-100",
+          "dark:opacity-0",
+        )}
         src={lightImage}
+        alt={alt}
+        title={alt}
+        width={9999}
+        height={9999}
+        aria-hidden={ariaHidden || false}
+      />
+      <Image
+        className={clsx(
+          "absolute inset-0 transition-all duration-300",
+          "opacity-0",
+          "dark:opacity-100",
+        )}
+        src={darkImage}
         alt={alt}
         title={alt}
         width={9999}

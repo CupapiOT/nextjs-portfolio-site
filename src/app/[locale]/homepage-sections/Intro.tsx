@@ -14,7 +14,7 @@ export default function Intro({
     <Section
       id={id}
       fadeInDirection={fadeInDirection}
-      className={clsx("bg-cyan-200 dark:bg-cyan-950", className || "")}
+      className={clsx("!bg-(--intro-background)", className || "")}
     >
       <h2 className="text-center font-extrabold text-2point5xl">{t("text")}</h2>
     </Section>
